@@ -1,0 +1,9 @@
+---
+provider: example
+name: Example CSP
+color: '#FF9900'
+icon: 'https://raw.githubusercontent.com/cloudforet-io/artwork/main/logo/symbol/Cloudforet_symbol--dark-navy.svg'
+order: 4
+options:
+  support_trusted_account: false
+  support_auto_sync: false

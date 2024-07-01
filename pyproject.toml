@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inventory-collector"
+description = "Cloudforet Inventory Collector Plugin"
+dynamic = ["version"]
+
+requires-python = ">= 3.8"
+
+dependencies = [
+  "spaceone-api>2.0.0",
+  "spaceone-core>2.0.0",
+  "spaceone-inventory==2.0.dev204",
+]
+
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[tool.setuptools.dynamic]
+version = {file = "src/VERSION"}
+
+[tool.setuptools.package-data]
+plugin = ["metadata/resource/*.yaml"]

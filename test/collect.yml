@@ -1,0 +1,6 @@
+---
+options: {}
+secret_data:
+  account_id: 01234567890
+  secret_field_1: access_key_1234
+  secret_field_2: secret_key_567800000

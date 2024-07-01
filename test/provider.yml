@@ -1,0 +1,35 @@
+---
+name: Example Provider
+order: 1
+provider: example
+capability:
+  general_service_account_schema:
+  - example_schema_type0
+  support_trusted_service_account: false
+  supported_schema:
+  - example_schema_type0
+tags:
+  color: '#FF9900'
+  external_link_template: https://<%- data.account_id %>.example.com
+  icon: https://raw.githubusercontent.com/cloudforet-io/artwork/main/logo/symbol/Cloudforet_symbol--dark-navy.png
+template:
+  service_account:
+    schema:
+      properties:
+        account_id:
+          minLength: 4.0
+          title: Account ID
+          type: string
+      required:
+      - account_id
+      type: object
+metadata:
+  view:
+    layouts:
+      help:service_account:create:
+        name: Creation Help
+        options:
+          markdown:
+            en: "# Example Provider User Guide\n## Guide step 1\nHello Provider guide\n## guide Step 2\nHello Provider step 2"
+        type: markdown
+

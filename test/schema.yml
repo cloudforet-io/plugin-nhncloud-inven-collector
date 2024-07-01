@@ -1,0 +1,32 @@
+---
+name: example_schema_type0
+schema:
+  order:
+  - account_id
+  - secret_field_1
+  - secret_field_2
+  properties:
+    account_id:
+      format: text
+      minLength: 10
+      title: Account ID
+      type: string
+    secret_field_1:
+      format: password
+      minLength: 10
+      title: Secret Data 1
+      type: string
+    secret_field_2:
+      format: password
+      minLength: 16
+      title: Secret Data 2
+      type: string
+  required:
+  - account_id
+  - secret_field_1
+  type: object
+service_type: secret.credentials
+tags:
+  description: Example Provider secret format
+labels:
+- example

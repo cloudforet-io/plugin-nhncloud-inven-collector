@@ -1,0 +1,22 @@
+search:
+  fields:
+    - VM ID: data.id
+    - IP Addresss: data.ip
+    - Account: data.account_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - VM ID: data.id
+    - IP Address: data.ip
+    - Account: data.account_id
+    - Created: data.created_at
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - VM ID: data.id
+    - IP: data.ip
+    - Account: data.account_id
+    - Created at: data.created_at

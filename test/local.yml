@@ -1,0 +1,2 @@
+endpoints:
+  inventory: grpc://localhost:50051
