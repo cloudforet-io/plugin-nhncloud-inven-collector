@@ -69,6 +69,7 @@ jobs:
             context: .
             push: true
             tags: ${{ steps.set_docker_tag.outputs.DOCKER_TAG }}
+            file: ./Dockerfile
 
         - name: Notice when job fails
           if: failure() && github.repository_owner == 'cloudforet-io'
