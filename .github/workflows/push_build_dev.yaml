@@ -8,7 +8,7 @@ on:
 
 env:
   DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-  DOCKER_ORGANIZATION: ${{ secrets.DISCORD_WEBHOOK || 'cloudforet }}
+  DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION || 'cloudforet' }}
 
 jobs:
   versioning:
