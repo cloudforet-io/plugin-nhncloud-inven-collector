@@ -8,6 +8,7 @@ on:
 
 env:
   DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+  DOCKER_ORGANIZATION: ${{ secrets.DISCORD_WEBHOOK || 'cloudforet }}
 
 jobs:
   versioning:
@@ -61,7 +62,7 @@ jobs:
           id: set_docker_tag
           run: |
             if [ "${{ github.repository_owner }}" = "cloudforet-io" ]; then
-              echo "DOCKER_TAG=pyengine/${{ github.event.repository.name }}:${{ env.VERSION }}" >> $GITHUB_OUTPUT
+              echo "DOCKER_TAG=${{ env.DOCKER_ORGANIZATION }}/${{ github.event.repository.name }}:${{ env.VERSION }}" >> $GITHUB_OUTPUT
             else
               echo "DOCKER_TAG=${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:${{ env.VERSION }}" >> $GITHUB_OUTPUT
             fi
