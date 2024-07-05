@@ -2,7 +2,7 @@ import logging
 from spaceone.core.connector import BaseConnector
 import requests
 
-from src.plugin.connector.base import NHNCloudBaseConnector
+from plugin.connector.base import NHNCloudBaseConnector
 
 _LOGGER = logging.getLogger("cloudforet")
 
