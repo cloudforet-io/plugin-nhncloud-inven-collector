@@ -1,9 +1,7 @@
 import abc
 import logging
-
 from spaceone.core.manager import BaseManager
 from spaceone.inventory.plugin.collector.lib import *
-
 from plugin.conf.cloud_service_conf import AUTH_TYPE
 
 _LOGGER = logging.getLogger("cloudforet")

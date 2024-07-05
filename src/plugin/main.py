@@ -1,7 +1,8 @@
 import logging
 from typing import Generator
 from spaceone.inventory.plugin.collector.lib.server import CollectorPluginServer
-from .manager.base import NHNCloudBaseManager
+
+from plugin.manager.base import NHNCloudBaseManager
 
 app = CollectorPluginServer()
 

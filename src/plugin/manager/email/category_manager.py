@@ -1,9 +1,9 @@
 import logging
 from spaceone.inventory.plugin.collector.lib import *
 
-from ..base import NHNCloudBaseManager
-from ...conf.cloud_service_conf import AUTH_TYPE
-from ...connector.email.category_connector import CategoryConnector
+from plugin.conf.cloud_service_conf import AUTH_TYPE
+from plugin.connector.email.category_connector import CategoryConnector
+from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 

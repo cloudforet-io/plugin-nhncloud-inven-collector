@@ -1,5 +1,4 @@
 import logging
-from spaceone.core.connector import BaseConnector
 import requests
 
 from plugin.connector.base import NHNCloudBaseConnector
