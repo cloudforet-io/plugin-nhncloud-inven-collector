@@ -1,7 +1,5 @@
-import os
 import abc
 import logging
-import time
 
 from spaceone.core.manager import BaseManager
 from spaceone.inventory.plugin.collector.lib import *
@@ -42,6 +40,7 @@ class NHNCloudBaseManager(BaseManager):
     @classmethod
     def list_managers_by_schema(cls, schema: str):
         for manager in cls.__subclasses__():
+
             if manager.auth_type.value == schema:
                 yield manager
 
@@ -54,7 +53,7 @@ class NHNCloudBaseManager(BaseManager):
 
         raise NotImplementedError("Secret data is not valid")
 
-    def collect_resources(self, secret_data: dict, schema: str):
+    def collect_resources(self, secret_data: dict):
         try:
             yield from self.collect_cloud_service_type()
 
