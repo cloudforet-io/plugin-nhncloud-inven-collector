@@ -23,9 +23,10 @@ class CategoryConnector(NHNCloudBaseConnector):
                     "X-Secret-Key": secret_key
                 })
 
-            if response.json()['body']['data'] is []:
+            if not response.json()['body']['data']:
                 break
 
             categories.extend(response.json()['body']['data'])
+            idx += 1
 
         return categories
