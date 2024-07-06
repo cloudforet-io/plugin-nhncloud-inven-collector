@@ -78,32 +78,16 @@ class NHNCloudBaseManager(BaseManager):
             resource_type="inventory.CloudServiceType",
         )
 
-    def collect_cloud_services(self, secret_data: dict):
-        try:
-            cloud_services = self.collect_cloud_service(
-                secret_data
-            )
-            for cloud_service in cloud_services:
-                yield cloud_service
-
-
-        except Exception as e:
-            yield make_error_response(
-                error=e,
-                provider=self.provider,
-                cloud_service_group=self.cloud_service_group,
-                cloud_service_type=self.cloud_service_type,
-            )
-
     def collect_cloud_service(self, secret_data: dict):
         total_resources = []
+
         cloud_services = self.create_cloud_service(secret_data)
 
         for cloud_service in cloud_services:
             total_resources.append(
                 make_response(
                     cloud_service=cloud_service,
-                    match_keys=["name", "reference.resource_id", "account", "provider"],
+                    match_keys=[["name", "reference.resource_id", "account", "provider"]],
                     resource_type="inventory.CloudService",
                 )
             )
