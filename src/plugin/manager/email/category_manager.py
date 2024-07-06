@@ -45,8 +45,8 @@ class CategoryManager(NHNCloudBaseManager):
                 cloud_service_group=self.cloud_service_group,
                 provider=self.provider,
                 data=category,
-                account=secret_data.get("account_id", None),
+                account=secret_data.get("project_id"),
                 reference=reference,
             )
 
-            return cloud_service
+            yield cloud_service
