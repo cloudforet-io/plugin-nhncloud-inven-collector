@@ -1,5 +1,5 @@
 from enum import Enum
 
 class AUTH_TYPE(Enum):
-    TOKEN = "nhn_cloud_access_key"
-    APP_KEY = "nhn_cloud_app_key"
+    TOKEN = "nhncloud-access-key"
+    APP_KEY = "nhncloud-app-key"
