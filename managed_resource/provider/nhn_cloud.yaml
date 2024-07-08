@@ -1,5 +1,5 @@
 ---
-provider: nhn-cloud
+provider: nhn_cloud
 name: NHN Cloud
 color: '#FF9900'
 icon: 'https://static.toastoven.net/toast/resources/img/logo_nhn_cloud_color.svg'

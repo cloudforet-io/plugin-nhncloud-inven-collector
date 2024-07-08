@@ -25,4 +25,4 @@ schema:
   - username
   - password
   type: object
-provider: nhn-cloud
+provider: nhn_cloud
