@@ -1,0 +1,21 @@
+---
+schema_id: nhncloud-app-key
+name: NHN Cloud App Key
+schema_type: SECRET
+schema:
+  order:
+  - api_key
+  - email_secret_key
+  properties:
+    api_key:
+      format: password
+      title: API Key
+      type: string
+    email_secret_key:
+      format: password
+      title: Email Secret Key
+      type: string
+  required:
+  - api_key
+  type: object
+provider: nhncloud
