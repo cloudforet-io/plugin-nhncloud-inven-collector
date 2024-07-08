@@ -2,7 +2,7 @@
 provider: nhncloud
 name: NHN Cloud
 color: '#FF9900'
-icon: 'https://static.toastoven.net/toast/resources/img/logo_nhn_cloud_color.svg'
+icon: 'https://rlhezzw2e.toastcdn.net/images/contents/nhncloud_symbol.png'
 order: 4
 options:
   support_trusted_account: false
