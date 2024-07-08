@@ -1,0 +1,9 @@
+---
+provider: nhncloud
+name: NHN Cloud
+color: '#FF9900'
+icon: 'https://static.toastoven.net/toast/resources/img/logo_nhn_cloud_color.svg'
+order: 4
+options:
+  support_trusted_account: false
+  support_auto_sync: false

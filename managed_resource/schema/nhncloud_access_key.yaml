@@ -1,0 +1,28 @@
+---
+schema_id: nhncloud-access-key
+name: NHN Cloud Access Key
+schema_type: SECRET
+schema:
+  order:
+  - tenant_id
+  - username
+  - password
+  properties:
+    tenant_id:
+      format: text
+      title: Tenant ID
+      type: string
+    username:
+      format: text
+      title: Username
+      type: string
+    password:
+      format: password
+      title: Password
+      type: string
+  required:
+  - tenant_id
+  - username
+  - password
+  type: object
+provider: nhncloud
