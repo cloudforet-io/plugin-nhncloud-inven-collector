@@ -39,7 +39,7 @@ class CategoryManager(NHNCloudBaseManager):
         for category in categories:
             reference = {
                     "resource_id": category.get("categoryId"),
-                    "external_link": f"https://cloudforet-dev.console.nhncloud.com/project/{secret_data.get('project_id')}/notification/email#manage-templates"
+                    "external_link": ""
                     }
             cloud_service = make_cloud_service(
                 name=category["categoryName"],
