@@ -5,3 +5,4 @@ class AUTH_TYPE(Enum):
     APP_KEY = "nhncloud-app-key"
 
 ASSET_URL="https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud"
+PROVIDER_NAME="nhncloud"

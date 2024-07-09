@@ -15,7 +15,7 @@ class CategoryManager(NHNCloudBaseManager):
         super().__init__(*args, **kwargs)
         self.cloud_service_group = "Email"
         self.cloud_service_type = "Category"
-        self.metadata_path = "metadata/email/category.yaml"
+        self.metadata_path = f"metadata/{self.cloud_service_group.lower()}/{self.cloud_service_type.lower()}.yaml"
 
     def create_cloud_service_type(self):
         cloud_service_type = make_cloud_service_type(

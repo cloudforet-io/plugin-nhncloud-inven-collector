@@ -2,7 +2,7 @@ import abc
 import logging
 from spaceone.core.manager import BaseManager
 from spaceone.inventory.plugin.collector.lib import *
-from plugin.conf.cloud_service_conf import AUTH_TYPE
+from plugin.conf.cloud_service_conf import AUTH_TYPE, PROVIDER_NAME
 
 _LOGGER = logging.getLogger("cloudforet")
 
@@ -16,7 +16,7 @@ class NHNCloudBaseManager(BaseManager):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.provider = "nhncloud"
+        self.provider = PROVIDER_NAME
 
 
     def __init_subclass__(cls, **kwargs):
