@@ -15,7 +15,6 @@ class CategoryManager(NHNCloudBaseManager):
         super().__init__(*args, **kwargs)
         self.cloud_service_group = "Email"
         self.cloud_service_type = "Category"
-        self.provider = "NHNCloud"
         self.metadata_path = "metadata/email/category.yaml"
 
     def create_cloud_service_type(self):
@@ -24,8 +23,11 @@ class CategoryManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
+            tags={
+                "spaceone:icon": "https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud/email.png"
+            }
         )
 
         return cloud_service_type
@@ -37,7 +39,7 @@ class CategoryManager(NHNCloudBaseManager):
         for category in categories:
             reference = {
                     "resource_id": category.get("categoryId"),
-                    "external_link": "https://github.com/cloudforet-io/plugin-nhncloud-inven-collector"
+                    "external_link": f"https://cloudforet-dev.console.nhncloud.com/project/{secret_data.get('project_id')}/notification/email#manage-templates"
                     }
             cloud_service = make_cloud_service(
                 name=category["categoryName"],
