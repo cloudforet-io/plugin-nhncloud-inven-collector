@@ -1,7 +1,7 @@
 import logging
 from spaceone.inventory.plugin.collector.lib import *
 
-from plugin.conf.cloud_service_conf import AUTH_TYPE
+from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL
 from plugin.connector.email.category_connector import CategoryConnector
 from plugin.manager.base import NHNCloudBaseManager
 
@@ -26,7 +26,7 @@ class CategoryManager(NHNCloudBaseManager):
             is_primary=False,
             is_major=False,
             tags={
-                "spaceone:icon": "https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud/email.png"
+                "spaceone:icon": f"{ASSET_URL}/email.png"
             }
         )
 
