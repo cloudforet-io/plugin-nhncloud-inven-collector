@@ -16,7 +16,7 @@ class NHNCloudBaseManager(BaseManager):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.provider = "NHNCloud"
+        self.provider = "nhncloud"
 
 
     def __init_subclass__(cls, **kwargs):
