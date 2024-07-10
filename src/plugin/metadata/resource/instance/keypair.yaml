@@ -1,0 +1,20 @@
+search:
+  fields:
+    - KeyPair ID: data.id
+    - Name: data.name
+    - User ID: data.user_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - KeyPair ID: data.id
+    - Name: data.name
+    - Create User ID: data.user_id
+    - Public Key: data.public_key
+    - Deleted : data.deleted
+    - Deleted_At : data.deleted_at
+    - Updated_At : data.updated_at
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
+    - Fingerprint: data.fingerprint
