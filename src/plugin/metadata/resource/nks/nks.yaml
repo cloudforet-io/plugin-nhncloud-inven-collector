@@ -1,0 +1,28 @@
+search:
+  fields:
+    - Cluster ID: data.uuid
+    - Cluster Name: data.name
+    - Node Count: data.node_count
+table:
+  sort:
+    key: data.uuid
+    desc: false
+  fields:
+    - Cluster ID: data.uuid
+    - Cluster Name: data.name
+    - Node Count: data.node_count
+    - Status: data.status
+    - Template ID: data.cluster_template_id
+    - Keypair: data.keypair
+    - Owner ID: data.owner
+    - OS Distro: data.os_distro
+    - Stack ID : data.stack_id
+    - Health Status : data.health_status
+tabs.0:
+  name: Labels
+  type: item
+  fields:
+    - Labels: data.labels
+      type: list
+      options:
+        delimiter: ', '
