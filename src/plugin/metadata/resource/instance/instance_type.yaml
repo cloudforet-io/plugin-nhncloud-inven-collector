@@ -1,0 +1,17 @@
+search:
+  fields:
+    - TYPE ID: data.id
+    - TYPE NAME: data.name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - TYPE ID: data.id
+    - TYPE NAME: data.name
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - TYPE ID: data.id
+    - TYPE NAME: data.name
