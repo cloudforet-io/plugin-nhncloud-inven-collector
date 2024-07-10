@@ -1,0 +1,127 @@
+search:
+  fields:
+    - KeyPair ID: data.id
+    - Name: data.name
+    - User ID: data.user_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - KeyPair ID: data.id
+    - Name: data.name
+    - Create User ID: data.user_id
+    - Host ID: data.hostId
+    - Status : data.status
+    - Deleted_At : data.deleted_at
+    - Updated_At : data.updated_at
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
+    - Fingerprint: data.fingerprint
+
+#{
+#    "servers": [
+#        {
+#            "status": "ACTIVE",
+#            "hostId": "945549d463d2e26acd933f1a142b70f375f4329fbc1c85ba21531b69",
+#            "addresses": {
+#                "Default Network": [
+#                    {
+#                        "version": 4,
+#                        "addr": "192.168.0.57",
+#                        "OS-EXT-IPS:type": "fixed",
+#                        "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:46:c5:2b"
+#                    }
+#                ]
+#            },
+#            "links": [
+#                {
+#                    "href": "https://kr1-api-instance-infrastructure.nhncloudservice.com/v2.1/servers/3f3dd026-5781-4167-bee0-3cbe2927a762",
+#                    "rel": "self"
+#                },
+#                {
+#                    "href": "https://kr1-api-instance-infrastructure.nhncloudservice.com/servers/3f3dd026-5781-4167-bee0-3cbe2927a762",
+#                    "rel": "bookmark"
+#                }
+#            ],
+#            "image": {
+#                "id": "721dbfc4-ff23-4668-b65f-b927aed2d2a2",
+#                "links": [
+#                    {
+#                        "href": "https://kr1-api-instance-infrastructure.nhncloudservice.com/images/721dbfc4-ff23-4668-b65f-b927aed2d2a2",
+#                        "rel": "bookmark"
+#                    }
+#                ]
+#            },
+#            "name": "az-test",
+#            "id": "3f3dd026-5781-4167-bee0-3cbe2927a762",
+#            "updated": "2024-07-04T08:00:17Z",
+#            "flavor": {
+#                "id": "13646526-0bb9-400b-929f-797fdb7547eb",
+#                "links": [
+#                    {
+#                        "href": "https://kr1-api-instance-infrastructure.nhncloudservice.com/flavors/13646526-0bb9-400b-929f-797fdb7547eb",
+#                        "rel": "bookmark"
+#                    }
+#                ]
+#            },
+#            "created": "2024-07-04T07:59:19Z",
+#            "progress": 0,
+#            "metadata": {
+#                "os_distro": "centos",
+#                "description": "CentOS 7.9 (2024.05.21)",
+#                "os_version": "7.9",
+#                "project_domain": "NORMAL",
+#                "monitoring_agent": "sysmon",
+#                "image_name": "CentOS 7.9 (2024.05.21)",
+#                "volume_size": "20",
+#                "os_architecture": "amd64",
+#                "login_username": "centos",
+#                "os_type": "linux",
+#                "tc_env": "sysmon"
+#            },
+#            "NHN-EXT-ATTR:root_volume_size": 20,
+#            "NHN-EXT-ATTR:ephemeral_disk_size": 0,
+#            "NHN-EXT-ATTR:protect": false,
+#            "NHN-EXT-ATTR:image_prop": {
+#                "os_distro": "centos",
+#                "description": "CentOS 7.9 (2024.05.21)",
+#                "project_domain": "WDI;NORMAL",
+#                "release_date": "2024.05.21",
+#                "nhncloud_product": "compute",
+#                "monitoring_agent": "sysmon",
+#                "deprecate_date": "null",
+#                "os_version": "7.9",
+#                "os_architecture": "amd64",
+#                "login_username": "centos",
+#                "nhncloud_category": "OS",
+#                "os_type": "linux",
+#                "hw_vif_multiqueue_enabled": "true",
+#                "base_image_ref": "721dbfc4-ff23-4668-b65f-b927aed2d2a2",
+#                "tc_env": "sysmon"
+#            },
+#            "key_name": "nhn",
+#            "OS-EXT-STS:vm_state": "active",
+#            "OS-SRV-USG:launched_at": "2024-07-04T08:00:16.000000",
+#            "security_groups": [
+#                {
+#                    "name": "default"
+#                }
+#            ],
+#            "OS-SRV-USG:terminated_at": null,
+#            "OS-EXT-AZ:availability_zone": "kr-pub-a",
+#            "user_id": "293c075e1229440982aed9b1b690718d",
+#            "tenant_id": "768e08996aa749f79cddab7824ef32ca",
+#            "OS-DCF:diskConfig": "MANUAL",
+#            "os-extended-volumes:volumes_attached": [
+#                {
+#                    "id": "da0960ed-513f-4da9-ae86-4488bf567072"
+#                }
+#            ],
+#            "accessIPv4": "",
+#            "accessIPv6": "",
+#            "OS-EXT-STS:power_state": 1,
+#            "config_drive": ""
+#        },
+#            ]
+#}
