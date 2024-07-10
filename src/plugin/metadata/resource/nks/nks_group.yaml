@@ -1,0 +1,36 @@
+search:
+  fields:
+    - Node Group ID: data.uuid
+    - Node Group Name: data.name
+    - Node Group Count: data.node_count
+table:
+  sort:
+    key: data.uuid
+    desc: false
+  fields:
+    - Node Group ID: data.uuid
+    - Node Group Name: data.name
+    - Node Group Count: data.node_count
+    - Status: data.status
+    - Image ID: data.image_id
+    - Flavor ID: data.flavor_id
+    - Stack ID : data.stack_id
+    - Max Node Count: data.max_node_count
+    - Min Node Count: data.min_node_count
+    - AZ_zone: tags.availability_zone
+    - boot_volume_size: tags.boot_volume_size
+    - boot_volume_type: tags.boot_volume_type
+    - kube_tag: tags.kube_tag
+    - node_image: tags.node_image
+    - os_arch: tags.os_arch
+    - os_distro: tags.os_distro
+    - os_type: tags.os_type
+
+tabs.0:
+  name: Node Addresses
+  type: item
+  fields:
+    - Impacted addresses: data.node_addresses
+      type: list
+      options:
+        delimiter: ', '
