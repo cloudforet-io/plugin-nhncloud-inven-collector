@@ -1,0 +1,17 @@
+search:
+  fields:
+    - Category ID: data.categoryId
+    - Category Name: data.categoryName
+    - User ID: data.createUser
+table:
+  sort:
+    key: data.categoryId
+    desc: false
+  fields:
+    - Category ID: data.categoryId
+    - Category Name: data.categoryName
+    - Is Used: data.useYn
+    - Create User ID: data.createUser
+    - Update User ID: data.updateUser
+    - Create Date: data.createDate
+    - Update Date: data.updateDate

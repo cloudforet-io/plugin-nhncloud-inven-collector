@@ -1,0 +1,1 @@
+from plugin.manager.email.category_manager import CategoryManager

@@ -22,4 +22,4 @@ license = {file = "LICENSE"}
 version = {file = "src/VERSION"}
 
 [tool.setuptools.package-data]
-plugin = ["metadata/resource/*.yaml"]
+plugin = ["metadata/**/*.yaml"]
