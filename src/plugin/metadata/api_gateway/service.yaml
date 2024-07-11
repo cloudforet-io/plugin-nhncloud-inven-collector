@@ -15,3 +15,17 @@ table:
     - Region Code: data.regionCode
     - Created At: data.createdAt
     - Updated At: data.updatedAt
+
+tabs.0:
+  name: Resources
+  items:
+    - name: Resources
+      type: simple-table
+      root_path: data.resources
+      fields:
+        - Resource ID: resourceId
+        - Path: path
+        - Method Type: methodType
+        - Method Name: methodName
+        - Method Description: methodDescription
+        - Plugin List: resourcePluginList

@@ -11,3 +11,5 @@ class REGION(Enum):
     KR2 = "Korea(Pyeongchon)"
     JP1 = "Japan(Tokyo)"
     US1 = "US(California)"
+
+HTTP_METHODS = ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"]
