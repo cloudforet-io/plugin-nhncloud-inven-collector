@@ -1,0 +1,17 @@
+search:
+  fields:
+    - API Gateway Service ID: data.apigwServiceId
+    - API Gateway Service Name: data.apigwServiceName
+    - Region Code: data.regionCode
+table:
+  sort:
+    key: data.apigwServiceId
+    desc: false
+  fields:
+    - Service ID: data.apigwServiceId
+    - Service Name: data.apigwServiceName
+    - Description: data.apigwServiceDescription
+    - Root Domain: data.apigwDomain
+    - Region Code: data.regionCode
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
