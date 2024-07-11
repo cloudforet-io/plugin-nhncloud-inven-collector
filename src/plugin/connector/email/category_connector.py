@@ -23,6 +23,11 @@ class CategoryConnector(NHNCloudBaseConnector):
                     "X-Secret-Key": secret_key
                 })
 
+            if response.json().get('header').get('isSuccessful') is False:
+                _LOGGER.error(f"Failed to get categories. {response.json()}")
+                raise Exception(f"Failed to get categories. {response.json()}")
+
+
             if not response.json()['body']['data']:
                 break
 
