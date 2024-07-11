@@ -3,7 +3,6 @@ from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL
 from plugin.connector.email.tag_connector import TagConnector
-from plugin.connector.email.template_connector import TemplateConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
