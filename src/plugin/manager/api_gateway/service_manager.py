@@ -44,9 +44,11 @@ class APIGatewayServiceManager(NHNCloudBaseManager):
                     "external_link": ""
                 }
                 resources = service_connector.list_resources_by_service_id(secret_data.get("app_key"), service.get("apigwServiceId"), AVAILABLE_REGION)
+                stages = service_connector.list_stages_by_service_id(secret_data.get("app_key"), service.get("apigwServiceId"), AVAILABLE_REGION)
 
                 service.update({
-                    "resources": resources
+                    "resources": resources,
+                    "stages": stages
                 })
 
                 cloud_service = make_cloud_service(

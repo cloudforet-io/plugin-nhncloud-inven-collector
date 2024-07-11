@@ -29,3 +29,18 @@ tabs.0:
         - Method Name: methodName
         - Method Description: methodDescription
         - Plugin List: resourcePluginList
+
+tabs.1:
+  name: Stages
+  items:
+      - name: Stages
+        type: simple-table
+        root_path: data.stages
+        fields:
+            - Stage ID: stageId
+            - Stage Name: stageName
+            - Stage Description: stageDescription
+            - Stage URL: stageUrl
+            - Backend Endpoint URL: backendEndpointUrl
+            - Created At: createdAt
+            - Updated At: updatedAt

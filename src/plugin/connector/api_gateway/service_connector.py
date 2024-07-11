@@ -12,6 +12,28 @@ class APIGatewayServiceConnector(NHNCloudBaseConnector):
         super().__init__(*args, **kwargs)
 
     @staticmethod
+    def list_stages_by_service_id(app_key, service_id, region:REGION) -> list:
+        stages = []
+        idx = 1
+        while True:
+            response = requests.get(f"https://{region.name.lower()}-apigateway.api.nhncloudservice.com/v1.0/appkeys/{app_key}/services/{service_id}/stages?page={idx}",
+                                    headers={
+                                        "Content-Type": "application/json",
+                                    })
+
+            if response.status_code != 200 or response.json().get('header').get('isSuccessful') is False:
+                _LOGGER.error(f"Failed to get stages. {response.json()}")
+                raise Exception(f"Failed to get stages. {response.json()}")
+
+            if not response.json()['stageList']:
+                break
+
+            stages.extend(response.json()['stageList'])
+            idx += 1
+
+        return stages
+
+    @staticmethod
     def list_resources_by_service_id(app_key, service_id, region:REGION) -> list:
         resources = []
         response = requests.get(f"https://{region.name.lower()}-apigateway.api.nhncloudservice.com/v1.0/appkeys/{app_key}/services/{service_id}/resources",
