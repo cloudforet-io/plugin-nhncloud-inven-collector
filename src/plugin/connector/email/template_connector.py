@@ -17,7 +17,7 @@ class TemplateConnector(NHNCloudBaseConnector):
         idx = 1
         while True:
             response = requests.get(
-                f"https://email.api.nhncloudservice.com/email/v22.1/appKeys/{app_key}/templates?pageNum={idx}",
+                f"https://email.api.nhncloudservice.com/email/v2.1/appKeys/{app_key}/templates?pageNum={idx}",
                 headers={
                     "Content-Type": "application/json",
                     "X-Secret-Key": secret_key
