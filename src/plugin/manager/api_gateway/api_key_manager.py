@@ -24,7 +24,7 @@ class APIKeyManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
+            is_primary=False,
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/api_gateway.png"

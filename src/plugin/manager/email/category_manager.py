@@ -23,8 +23,8 @@ class CategoryManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=False,
-            is_major=False,
+            is_primary=True,
+            is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/email.png"
             }

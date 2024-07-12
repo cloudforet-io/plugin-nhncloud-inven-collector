@@ -24,7 +24,7 @@ class TemplateManager(NHNCloudBaseManager):
             provider=self.provider,
             metadata_path=self.metadata_path,
             is_primary=False,
-            is_major=False,
+            is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/email.png"
             }
