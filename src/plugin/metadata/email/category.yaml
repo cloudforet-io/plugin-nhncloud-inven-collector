@@ -11,7 +11,22 @@ table:
     - Category ID: data.categoryId
     - Category Name: data.categoryName
     - Is Used: data.useYn
-    - Create User ID: data.createUser
-    - Update User ID: data.updateUser
     - Create Date: data.createDate
     - Update Date: data.updateDate
+
+tabs.0:
+    name: Details
+    items:
+      - name: Details
+        type: item
+        fields:
+          - Category ID: data.categoryId
+          - Parent Category ID: data.categoryParentId
+          - Depth: data.depth
+          - Category Name: data.categoryName
+          - Category Description: data.categoryDesc
+          - Use YN: data.useYn
+          - Create User: data.createUser
+          - Create Date: data.createDate
+          - Update User: data.updateUser
+          - Update Date: data.updateDate
