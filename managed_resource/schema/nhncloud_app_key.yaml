@@ -6,6 +6,7 @@ schema:
   order:
   - app_key
   - email_secret_key
+  - push_secret_key
   properties:
     app_key:
       format: password
@@ -14,6 +15,10 @@ schema:
     email_secret_key:
       format: password
       title: Email Secret Key
+      type: string
+    push_secret_key:
+      format: password
+      title: Push Secret Key
       type: string
   required:
   - app_key
