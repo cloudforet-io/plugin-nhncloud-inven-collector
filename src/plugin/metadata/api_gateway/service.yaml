@@ -11,12 +11,29 @@ table:
     - Service ID: data.apigwServiceId
     - Service Name: data.apigwServiceName
     - Description: data.apigwServiceDescription
-    - Root Domain: data.apigwDomain
-    - Region Code: data.regionCode
     - Created At: data.createdAt
     - Updated At: data.updatedAt
 
 tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - Service ID: data.apigwServiceId
+        - Service Alias: data.apigwServiceAlias
+        - Service Name: data.apigwServiceName
+        - Service Description: data.apigwServiceDescription
+        - Domain: data.apigwDomain
+        - App Key: data.appKey
+        - Region Code: data.regionCode
+        - Server Group ID: data.serverGroupId
+        - Dedicated ID: data.dedicatedId
+        - Created At: data.createdAt
+        - Updated At: data.updatedAt
+        - Service Type Code: data.apigwServiceTypeCode
+
+tabs.1:
   name: Resources
   items:
     - name: Resources
@@ -30,7 +47,7 @@ tabs.0:
         - Method Description: methodDescription
         - Plugin List: resourcePluginList
 
-tabs.1:
+tabs.2:
   name: Stages
   items:
       - name: Stages
