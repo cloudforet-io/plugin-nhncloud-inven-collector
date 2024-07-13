@@ -25,7 +25,6 @@ tabs.0:
         - Service Name: data.apigwServiceName
         - Service Description: data.apigwServiceDescription
         - Domain: data.apigwDomain
-        - App Key: data.appKey
         - Region Code: data.regionCode
         - Server Group ID: data.serverGroupId
         - Dedicated ID: data.dedicatedId
