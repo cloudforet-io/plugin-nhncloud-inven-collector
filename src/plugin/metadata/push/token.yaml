@@ -1,0 +1,14 @@
+search:
+  fields:
+    - UID: data.uid
+    - Token: data.token
+table:
+  sort:
+    key: data.uid
+    desc: false
+  fields:
+    - UID: data.tagId
+    - Push Type: data.pushType
+    - Token: data.token
+    - Time Zone ID: data.timeZoneId
+    - Update Date: data.updatedDateTime
