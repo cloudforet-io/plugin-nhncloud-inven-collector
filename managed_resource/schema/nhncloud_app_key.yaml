@@ -4,18 +4,18 @@ name: NHN Cloud App Key
 schema_type: SECRET
 schema:
   order:
-  - api_key
+  - app_key
   - email_secret_key
   properties:
-    api_key:
+    app_key:
       format: password
-      title: API Key
+      title: APP Key
       type: string
     email_secret_key:
       format: password
       title: Email Secret Key
       type: string
   required:
-  - api_key
+  - app_key
   type: object
 provider: nhncloud
