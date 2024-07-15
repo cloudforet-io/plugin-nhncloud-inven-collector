@@ -6,3 +6,4 @@ from plugin.manager.api_gateway.api_key_manager import APIKeyManager
 from plugin.manager.api_gateway.usage_plan_manager import UsagePlanManager
 from plugin.manager.push.token_manager import PushTokenManager
 from plugin.manager.push.tag_manager import PushTagManager
+from plugin.manager.transit_hub.transit_hub_manager import TransitHubManager
