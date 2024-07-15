@@ -7,8 +7,8 @@ table:
     key: data.id
     desc: false
   fields:
-    - ID: data.tagId
-    - Name: data.tagName
+    - ID: data.id
+    - Name: data.name
     - Default Propagation Enable: data.default_propagation_enable
     - Default Association Enable: data.default_association_enable
     - Multicast Enable: data.multicast_enable

@@ -3,7 +3,7 @@ import logging
 from spaceone.inventory.plugin.collector.lib import make_cloud_service_type, make_cloud_service
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL, REGION
-from plugin.connector.transit_hub.transit_sub_connector import TransitHubConnector
+from plugin.connector.transit_hub.transit_hub_connector import TransitHubConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
@@ -24,7 +24,7 @@ class TransitHubManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=False,
+            is_primary=True,
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/transit_hub.png"
