@@ -1,0 +1,34 @@
+search:
+  fields:
+    - ID: data.id
+    - Name: data.name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ID: data.id
+    - Name: data.name
+    - Is Remote: data.remote
+    - Transit Hub ID: data.transithub_id
+
+tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - Status: data.status
+        - Is Remote: data.remote
+        - Name: data.name
+        - Resource ID: data.resource_id
+        - Subnet ID: data.subnet_id
+        - Tenant ID: data.tenant_id
+        - Created At: data.created_at
+        - Updated At: data.updated_at
+        - Resource CIDR: data.resource_cidr
+        - Transit Hub ID: data.transithub_id
+        - Project ID: data.project_id
+        - Port ID: data.port_id
+        - ID: data.id
+        - Description: data.description
