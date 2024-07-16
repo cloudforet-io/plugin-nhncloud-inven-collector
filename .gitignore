@@ -12,4 +12,4 @@ local-conf.yml
 .venv/
 .venv.nosync/
 .DS_Store
-.test/
+/test/
