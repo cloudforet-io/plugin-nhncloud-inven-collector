@@ -24,6 +24,6 @@ class TransitHubConnector(NHNCloudBaseConnector):
             _LOGGER.error(f"Failed to get tags. {response.json()}")
             raise Exception(f"Failed to get tags. {response.json()}")
 
-        transit_hubs = response.json().get("transitHubs", [])
+        transit_hubs = response.json().get("transithubs", [])
 
         return transit_hubs
