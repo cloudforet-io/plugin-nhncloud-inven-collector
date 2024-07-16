@@ -1,6 +1,9 @@
 ---
 options: {}
 secret_data:
-  account_id: 01234567890
-  secret_field_1: access_key_1234
-  secret_field_2: secret_key_567800000
+  app_key: LgHEAgmaWVPHgAwJtBTI
+  email_secret_key: NqedVKrcOAnnjaQEW25wB5vR75ifHQCu
+  push_secret_key: dJpkPxEPiCbdcJbZZpKAu33ahFsH0qaZ
+  certificate_app_key: 6ByYJdx5BPnUTLNl
+  user_access_key_ID: yKzX8MT7Hky1ORQ07SYq
+  secret_access_key: aSpxNg9mmxCbA9nS

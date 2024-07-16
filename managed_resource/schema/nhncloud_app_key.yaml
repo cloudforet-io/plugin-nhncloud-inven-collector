@@ -7,6 +7,9 @@ schema:
   - app_key
   - email_secret_key
   - push_secret_key
+  - certificate_app_key
+  - user_access_key_ID
+  - secret_access_key
   properties:
     app_key:
       format: password
@@ -19,6 +22,18 @@ schema:
     push_secret_key:
       format: password
       title: Push Secret Key
+      type: string
+    certificate_app_key:
+      format: password
+      title: Certificate App Key
+      type: string
+    user_access_key_ID:
+      format: password
+      title: User Access Key ID
+      type: string
+    secret_access_key:
+      format: password
+      title: Secret Access Key
       type: string
   required:
   - app_key
