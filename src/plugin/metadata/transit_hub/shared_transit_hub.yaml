@@ -1,0 +1,26 @@
+search:
+  fields:
+    - ID: data.transithub_id
+    - Name: data.transithub_name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ID: data.transithub_id
+    - Name: data.transithub_name
+    - Tenant ID: data.tenant_id
+
+tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - Transit Hub Name: data.transithub_name
+        - Transit Hub ID: data.transithub_id
+        - Description: data.description
+        - Tenant ID: data.tenant_id
+        - Transit Hub Project ID: data.transithub_project_id
+        - ID: data.id
+        - Project ID: data.project_id

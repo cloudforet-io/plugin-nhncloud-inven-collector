@@ -1,0 +1,26 @@
+search:
+  fields:
+    - Domain ID: data.data.domain_id
+    - Domain Name: data.domain_name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Domain ID: data.data.domain_id
+    - Domain Name: data.domain_name
+    - Tenant ID: data.tenant_id
+
+tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - Domain ID: data.domain_id
+        - Description: data.description
+        - Tenant ID: data.tenant_id
+        - Domain Project ID: data.domain_project_id
+        - Domain Name: data.domain_name
+        - ID: data.id
+        - Project ID: data.project_id
