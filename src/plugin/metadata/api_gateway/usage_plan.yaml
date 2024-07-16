@@ -1,0 +1,29 @@
+search:
+  fields:
+    - Usage Plan ID: data.usagePlanId
+    - Usage Plan Name: data.usagePlanName
+table:
+  sort:
+    key: data.usagePlanId
+    desc: false
+  fields:
+    - Usage Plan ID: data.usagePlanId
+    - Usage Plan Name: data.usagePlanName
+    - Description: data.usagePlanDescription
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.0:
+    name: Details
+    items:
+      - name: Details
+        type: item
+        fields:
+          - Usage Plan ID: data.usagePlanId
+          - Usage Plan Name: data.usagePlanName
+          - Usage Plan Description: data.usagePlanDescription
+          - Rate Limit Request Per Second: data.rateLimitRequestPerSecond
+          - Quota Limit Period Unit Code: data.quotaLimitPeriodUnitCode
+          - Quota Limit: data.quotaLimit
+          - Created At: data.createdAt
+          - Updated At: data.updatedAt

@@ -1,0 +1,19 @@
+search:
+  fields:
+    - Category ID: data.categoryId
+    - Category Name: data.categoryName
+    - Template ID: data.templateId
+    - Template Name: data.templateName
+    - Template Title: data.title
+table:
+  sort:
+    key: data.templateId
+    desc: false
+  fields:
+    - Template ID: data.templateId
+    - Template Name: data.templateName
+    - Template Category: data.categoryName
+    - Template Title: data.title
+    - Is Used: data.useYn
+    - Create Date: data.createDate
+    - Update Date: data.updateDate

@@ -1,0 +1,62 @@
+search:
+  fields:
+    - API Gateway Service ID: data.apigwServiceId
+    - API Gateway Service Name: data.apigwServiceName
+    - Region Code: data.regionCode
+table:
+  sort:
+    key: data.apigwServiceId
+    desc: false
+  fields:
+    - Service ID: data.apigwServiceId
+    - Service Name: data.apigwServiceName
+    - Description: data.apigwServiceDescription
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - Service ID: data.apigwServiceId
+        - Service Alias: data.apigwServiceAlias
+        - Service Name: data.apigwServiceName
+        - Service Description: data.apigwServiceDescription
+        - Domain: data.apigwDomain
+        - Region Code: data.regionCode
+        - Server Group ID: data.serverGroupId
+        - Dedicated ID: data.dedicatedId
+        - Created At: data.createdAt
+        - Updated At: data.updatedAt
+        - Service Type Code: data.apigwServiceTypeCode
+
+tabs.1:
+  name: Resources
+  items:
+    - name: Resources
+      type: simple-table
+      root_path: data.resources
+      fields:
+        - Resource ID: resourceId
+        - Path: path
+        - Method Type: methodType
+        - Method Name: methodName
+        - Method Description: methodDescription
+        - Plugin List: resourcePluginList
+
+tabs.2:
+  name: Stages
+  items:
+      - name: Stages
+        type: simple-table
+        root_path: data.stages
+        fields:
+            - Stage ID: stageId
+            - Stage Name: stageName
+            - Stage Description: stageDescription
+            - Stage URL: stageUrl
+            - Backend Endpoint URL: backendEndpointUrl
+            - Created At: createdAt
+            - Updated At: updatedAt

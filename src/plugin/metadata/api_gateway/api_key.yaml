@@ -1,0 +1,27 @@
+search:
+  fields:
+    - API Key ID: data.apiKeyId
+    - API Key Name: data.apiKeyName
+table:
+  sort:
+    key: data.apiKeyId
+    desc: false
+  fields:
+    - API Key ID: data.apiKeyId
+    - API Key Name: data.apiKeyName
+    - Description: data.apiKeyDescription
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - Key ID: data.apiKeyId
+        - Key Name: data.apiKeyName
+        - Description: data.apiKeyDescription
+        - Status: data.apiKeyStatus
+        - Created At: data.createdAt
+        - Updated At: data.updatedAt

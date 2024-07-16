@@ -2,19 +2,19 @@ import logging
 from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL
-from plugin.connector.email.category_connector import CategoryConnector
+from plugin.connector.push.token_connector import PushTokenConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class CategoryManager(NHNCloudBaseManager):
+class PushTokenManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.APP_KEY
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.cloud_service_group = "Email"
-        self.cloud_service_type = "Category"
+        self.cloud_service_group = "Push"
+        self.cloud_service_type = "Token"
         self.metadata_path = f"metadata/{self.cloud_service_group.lower()}/{self.cloud_service_type.lower()}.yaml"
 
     def create_cloud_service_type(self):
@@ -26,27 +26,28 @@ class CategoryManager(NHNCloudBaseManager):
             is_primary=True,
             is_major=True,
             tags={
-                "spaceone:icon": f"{ASSET_URL}/email.png"
+                "spaceone:icon": f"{ASSET_URL}/push.png"
             }
         )
 
         return cloud_service_type
 
     def create_cloud_service(self, secret_data):
-        category_connector = CategoryConnector()
-        categories = category_connector.list_categories(secret_data.get("app_key"), secret_data.get("email_secret_key"))
+        token_connector = PushTokenConnector()
+        tokens = token_connector.list_tokens(secret_data.get("app_key"), secret_data.get("push_secret_key"))
 
-        for category in categories:
+        for token in tokens:
             reference = {
-                    "resource_id": category.get("categoryId"),
+                    "resource_id": token.get("token"),
                     "external_link": ""
                     }
+
             cloud_service = make_cloud_service(
-                name=category["categoryName"],
+                name=token["uid"],
                 cloud_service_type=self.cloud_service_type,
                 cloud_service_group=self.cloud_service_group,
                 provider=self.provider,
-                data=category,
+                data=token,
                 account=secret_data.get("project_id"),
                 reference=reference,
             )

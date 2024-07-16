@@ -1,0 +1,13 @@
+search:
+  fields:
+    - Tag ID: data.tagId
+    - Tag Name: data.tagName
+table:
+  sort:
+    key: data.tagId
+    desc: false
+  fields:
+    - Tag ID: data.tagId
+    - Tag Name: data.tagName
+    - Create Date: data.createDate
+    - Update Date: data.updateDate

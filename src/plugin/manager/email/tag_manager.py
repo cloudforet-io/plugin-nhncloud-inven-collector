@@ -2,19 +2,19 @@ import logging
 from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL
-from plugin.connector.email.category_connector import CategoryConnector
+from plugin.connector.email.tag_connector import TagConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class CategoryManager(NHNCloudBaseManager):
+class TagManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.APP_KEY
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.cloud_service_group = "Email"
-        self.cloud_service_type = "Category"
+        self.cloud_service_type = "Tag"
         self.metadata_path = f"metadata/{self.cloud_service_group.lower()}/{self.cloud_service_type.lower()}.yaml"
 
     def create_cloud_service_type(self):
@@ -23,8 +23,8 @@ class CategoryManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/email.png"
             }
@@ -33,20 +33,20 @@ class CategoryManager(NHNCloudBaseManager):
         return cloud_service_type
 
     def create_cloud_service(self, secret_data):
-        category_connector = CategoryConnector()
-        categories = category_connector.list_categories(secret_data.get("app_key"), secret_data.get("email_secret_key"))
+        tag_connector = TagConnector()
+        tags = tag_connector.list_tags(secret_data.get("app_key"), secret_data.get("email_secret_key"))
 
-        for category in categories:
+        for tag in tags:
             reference = {
-                    "resource_id": category.get("categoryId"),
+                    "resource_id": tag.get("tagId"),
                     "external_link": ""
                     }
             cloud_service = make_cloud_service(
-                name=category["categoryName"],
+                name=tag["tagName"],
                 cloud_service_type=self.cloud_service_type,
                 cloud_service_group=self.cloud_service_group,
                 provider=self.provider,
-                data=category,
+                data=tag,
                 account=secret_data.get("project_id"),
                 reference=reference,
             )

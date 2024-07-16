@@ -1,0 +1,34 @@
+search:
+  fields:
+    - UID: data.uid
+    - Token: data.token
+table:
+  sort:
+    key: data.uid
+    desc: false
+  fields:
+    - UID: data.tagId
+    - Push Type: data.pushType
+    - Token: data.token
+    - Update Date: data.updatedDateTime
+
+tabs.0:
+    name: Details
+    items:
+      - name: Details
+        type: item
+        fields:
+          - Push Type: data.pushType
+          - Notification Agreement: data.isNotificationAgreement
+          - Ad Agreement: data.isAdAgreement
+          - Night Ad Agreement: data.isNightAdAgreement
+          - Timezone ID: data.timezoneId
+          - Country: data.country
+          - Language: data.language
+          - User ID: data.uid
+          - Token: data.token
+          - Updated Date Time: data.updatedDateTime
+          - Ad Agreement Date Time: data.adAgreementDateTime
+          - Night Ad Agreement Date Time: data.nightAdAgreementDateTime
+          - Device ID: data.deviceId
+          - Activated Date Time: data.activatedDateTime
