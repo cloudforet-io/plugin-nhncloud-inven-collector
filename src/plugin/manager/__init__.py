@@ -9,3 +9,4 @@ from plugin.manager.push.tag_manager import PushTagManager
 from plugin.manager.transit_hub.transit_hub_manager import TransitHubManager
 from plugin.manager.transit_hub.attachment_manager import AttachmentManager
 from plugin.manager.transit_hub.routing_table_manager import RoutingTableManager
+from plugin.manager.transit_hub.multicast_domain_manager import MulticastDomainManager

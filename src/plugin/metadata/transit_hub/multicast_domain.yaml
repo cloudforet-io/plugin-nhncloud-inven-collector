@@ -1,0 +1,68 @@
+search:
+  fields:
+    - ID: data.id
+    - Name: data.name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ID: data.id
+    - Name: data.name
+    - Transit Hub ID: data.transithub_id
+    - Status: data.status
+
+tabs.0:
+  name: Details
+  items:
+    - name: Details
+      type: item
+      fields:
+        - ID: data.id
+        - Name: data.name
+        - Status: data.status
+        - Description: data.description
+        - Tenant ID: data.tenant_id
+        - Created At: data.created_at
+        - Updated At: data.updated_at
+        - Transit Hub ID: data.transithub_id
+        - Project ID: data.project_id
+
+tabs.1:
+  name: Multicast Associations
+  items:
+    - name: Multicast Associations
+      type: table
+      root_path: data.associations
+      fields:
+        - ID: id
+        - Status: status
+        - Attachment ID: attachment_id
+        - Description: description
+        - Subnet ID: subnet_id
+        - Tenant ID: tenant_id
+        - Created At: created_at
+        - Project ID: project_id
+        - Updated At: updated_at
+        - Domain ID: domain_id
+
+tabs.2:
+  name: Multicast Groups
+  items:
+    - name: Multicast Groups
+      type: table
+      root_path: data.groups
+      fields:
+        - ID: id
+        - Description: description
+        - Updated At: updated_at
+        - Member Type: member_type
+        - Source Type: source_type
+        - Port ID: port_id
+        - IP Address: ipaddress
+        - Subnet ID: subnet_id
+        - Tenant ID: tenant_id
+        - Created At: created_at
+        - Domain ID: domain_id
+        - Association ID: association_id
+        - Project ID: project_id
