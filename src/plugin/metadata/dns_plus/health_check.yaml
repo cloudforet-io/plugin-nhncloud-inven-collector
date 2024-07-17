@@ -1,0 +1,35 @@
+search:
+  fields:
+    - ID: data.healthCheckId
+    - Name: data.healthCheckName
+table:
+  sort:
+    key: data.healthCheckId
+    desc: false
+  fields:
+    - Health Check ID: data.healthCheckId
+    - Health Check Name: data.healthCheckName
+    - Protocol: data.protocol
+    - Port: data.port
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - Health Check ID: data.healthCheckId
+    - Health Check Name: data.healthCheckName
+    - Protocol: data.protocol
+    - Port: data.port
+    - Interval: data.interval
+    - Timeout: data.timeout
+    - Retries: data.retries
+    - Path: data.path
+    - Expected Codes: data.expectedCodes
+    - Expected Body: data.expectedBody
+    - Allow Insecure: data.allowInsecure
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+    - Request Headers: data.requestHeaderList
+      type: badge
