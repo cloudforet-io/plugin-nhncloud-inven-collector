@@ -1,0 +1,44 @@
+search:
+  fields:
+    - ID: data.zoneId
+    - Name: data.zoneName
+table:
+  sort:
+    key: data.zoneId
+    desc: false
+  fields:
+    - Zone Name: data.zoneName
+    - Recordset Count: data.recordsetCount
+    - Description: data.description
+    - Created At: data.createdAt
+    - Zone Status: data.zoneStatus
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - Zone ID: data.zoneId
+    - Zone Name: data.zoneName
+    - Engine ID: data.engineId
+    - Zone Status: data.zoneStatus
+    - Description: data.description
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+    - Recordset Count: data.recordsetCount
+
+tabs.1:
+  name: Record Sets
+  items:
+    - name: Record Sets
+      type: table
+      root_path: data.recordSets
+      fields:
+        - Recordset ID: recordsetId
+        - Recordset Name: recordsetName
+        - Recordset Type: recordsetType
+        - Recordset TTL: recordsetTtl
+        - Recordset Status: recordsetStatus
+        - Created At: createdAt
+        - Updated At: updatedAt
+        - Record List: recordList
+          type: badge

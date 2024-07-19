@@ -1,0 +1,29 @@
+search:
+  fields:
+    - ID: data.poolId
+    - Name: data.poolName
+table:
+  sort:
+    key: data.poolId
+    desc: false
+  fields:
+    - Pool ID: data.poolId
+    - Pool Name: data.poolName
+    - Pool Disabled: data.poolDisabled
+    - Healthy: data.healthy
+    - Health Check ID: data.healthCheckId
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.0:
+  name: EndPoint List
+  items:
+    - name: EndPoint List
+      type: table
+      root_path: data.endpointList
+      fields:
+        - Endpoint Address: endpointAddress
+        - Endpoint Weight: endpointWeight
+        - Endpoint Disabled: endpointDisabled
+        - Healthy: healthy
+        - Failure Reason: failureReason

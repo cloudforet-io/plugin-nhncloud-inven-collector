@@ -1,0 +1,44 @@
+search:
+  fields:
+    - ID: data.gslbId
+    - Name: data.gslbName
+table:
+  sort:
+    key: data.gslbId
+    desc: false
+  fields:
+    - GSLB ID: data.gslbId
+    - GSLB Name: data.gslbName
+    - GSLB Domain: data.gslbDomain
+    - GSLB TTL: data.gslbTtl
+    - GSLB Routing Rule: data.gslbRoutingRule
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - GSLB ID: data.gslbId
+    - GSLB Name: data.gslbName
+    - GSLB Domain: data.gslbDomain
+    - GSLB TTL: data.gslbTtl
+    - GSLB Routing Rule: data.gslbRoutingRule
+    - GSLB Disabled: data.gslbDisabled
+    - Healthy: data.healthy
+    - Created At: data.createdAt
+    - Updated At: data.updatedAt
+
+tabs.1:
+  name: Connected Pool List
+  items:
+    - name: Connected Pool List
+      type: table
+      root_path: data.connectedPoolList
+      fields:
+        - ID: pool.poolId
+        - Name: pool.poolName
+        - Order: connectedPoolOrder
+        - EndPoint Count: pool.endpointLength
+        - Health Check: pool.healthCheckId
+        - Pool Region: connectedPoolRegionContent

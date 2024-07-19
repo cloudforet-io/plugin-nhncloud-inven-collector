@@ -1,0 +1,84 @@
+search:
+  fields:
+    - ID: data.id
+    - Name: data.name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ID: data.id
+    - Name: data.name
+    - Default Routing Table: data.default_table
+    - Transit Hub ID: data.transithub_id
+    - Status: data.status
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - ID: data.id
+    - Name: data.name
+    - Status: data.status
+    - Description: data.description
+    - Tenant ID: data.tenant_id
+    - Created At: data.created_at
+    - Updated At: data.updated_at
+    - Default Table: data.default_table
+    - Transit Hub ID: data.transithub_id
+    - Project ID: data.project_id
+
+tabs.1:
+  name: Associations
+  items:
+    - name: Associations
+      type: table
+      root_path: data.associations
+      fields:
+        - ID: id
+        - Status: status
+        - Attachment ID: attachment_id
+        - Description: description
+        - Tenant ID: tenant_id
+        - Routing Table ID: routing_table_id
+        - Created At: created_at
+        - Project ID: project_id
+        - Updated At: updated_at
+
+tabs.2:
+  name: Propagations
+  items:
+    - name: Propagations
+      type: table
+      root_path: data.propagations
+      fields:
+        - ID: id
+        - Status: status
+        - Attachment ID: attachment_id
+        - Description: description
+        - Tenant ID: tenant_id
+        - Routing Table ID: routing_table_id
+        - Created At: created_at
+        - Project ID: project_id
+        - Updated At: updated_at
+
+tabs.3:
+  name: Rules
+  items:
+    - name: Rules
+      type: table
+      root_path: data.rules
+      fields:
+        - ID: id
+        - Status: status
+        - Rule Type: rule_type
+        - Attachment ID: attachment_id
+        - Description: description
+        - Tenant ID: tenant_id
+        - Created At: created_at
+        - Updated At: updated_at
+        - Action: action
+        - Routing Table ID: routing_table_id
+        - CIDR: cidr
+        - Project ID: project_id
+        - Propagation ID: propagation_id
