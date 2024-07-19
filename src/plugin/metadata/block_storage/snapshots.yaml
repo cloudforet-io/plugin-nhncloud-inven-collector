@@ -1,0 +1,35 @@
+search:
+  fields:
+    - Snapshot ID: data.id
+    - Snapshot Name: data.name
+    - Volume ID: data.volume_id
+    - Status: data.status
+    - Created Date: data.created_at
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Snapshot ID: data.id
+    - Snapshot Name: data.name
+    - Volume ID: data.volume_id
+    - Size: data.size
+    - Status: data.status
+    - OS Extended Snapshot Attributes Progress: data.os-extended-snapshot-attributes:progress
+    - Description: data.description
+    - Created Date: data.created_at
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - Snapshot ID: data.id
+    - Snapshot Name: data.name
+    - Volume ID: data.volume_id
+    - Size: data.size
+    - Status: data.status
+    - OS Extended Snapshot Attributes Progress: data.os-extended-snapshot-attributes:progress
+    - Description: data.description
+    - Created Date: data.created_at
+    - Metadata: data.metadata
+    - OS Extended Snapshot Attributes Project ID: data.os-extended-snapshot-attributes:project_id

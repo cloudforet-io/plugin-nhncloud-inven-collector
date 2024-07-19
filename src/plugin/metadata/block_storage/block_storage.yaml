@@ -1,0 +1,52 @@
+search:
+  fields:
+    - Volume ID: data.id
+    - Volume Name: data.name
+    - Volume Type: data.volume_type
+    - User ID: data.user_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Volume ID: data.id
+    - Volume Name: data.name
+    - Volume Type: data.volume_type
+    - User ID: data.user_id
+    - Size: data.size
+    - Status: data.status
+    - Created Date: data.created_at
+    - Multi Attach: data.multiattach
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - Volume ID: data.id
+    - Volume Name: data.name
+    - Volume Type: data.volume_type
+    - User ID: data.user_id
+    - Size: data.size
+    - Status: data.status
+    - Created Date: data.created_at
+    - Replication Status: data.replication_status
+    - Availability Zone: data.availability_zone
+    - Encrypted: data.encrypted
+    - OS Volume Replication Extended Status: data.os-volume-replication:extended_status
+    - Snapshot ID: data.snapshot_id
+    - OS Vol Tenant Attr Tenant ID: data.os-vol-tenant-attr:tenant_id
+    - Metadata: data.metadata
+    - Description: data.description
+    - Multi Attach: data.multiattach
+    - Source Volume ID: data.source_volid
+    - Consistency Group ID: data.consistencygroup_id
+    - Bootable: data.bootable
+    - OS Volume Replication Driver Data: data.os-volume-replication:driver_data
+
+tabs.1:
+  name: Metadata
+  type: table
+  root_path: metadata
+  fields:
+    - ATTACHED MODE: attached_mode
+    - READONLY: readonly
