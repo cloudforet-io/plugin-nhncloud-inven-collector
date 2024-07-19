@@ -8,4 +8,4 @@ provider: nhncloud
 registry_type: DOCKER_HUB
 resource_type: inventory.Collector
 tags:
-  icon: https://rlhezzw2e.toastcdn.net/images/contents/nhncloud_symbol.png
+  icon: https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud/logo.png
