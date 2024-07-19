@@ -24,3 +24,10 @@ from plugin.manager.rds_for_mariadb.parameter_group_manager import ParameterGrou
 from plugin.manager.rds_for_mariadb.backup_manager import BackupManager
 from plugin.manager.rds_for_mariadb.user_group_manager import UserGroupManager
 from plugin.manager.rds_for_mariadb.notification_group_manager import NotificationGroupManager
+from plugin.manager.rds_for_mysql.db_instance_group_manager import DBInstanceGroupManager
+from plugin.manager.rds_for_mysql.db_instance_manager import DBInstanceManager
+from plugin.manager.rds_for_mysql.db_security_group_manager import DBSecurityGroupManager
+from plugin.manager.rds_for_mysql.parameter_group_manager import ParameterGroupManager
+from plugin.manager.rds_for_mysql.backup_manager import BackupManager
+from plugin.manager.rds_for_mysql.user_group_manager import UserGroupManager
+from plugin.manager.rds_for_mysql.notification_group_manager import NotificationGroupManager

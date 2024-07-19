@@ -1,0 +1,22 @@
+search:
+  fields:
+    - DB Instance ID: data.dbInstanceId
+    - DB Instance Name: data.dbInstanceName
+    - DB Version: data.dbVersion
+    - DB Instance Type: data.dbInstanceType
+table:
+  sort:
+    key: data.dbInstanceId
+    desc: false
+  fields:
+    - DB Instance ID: data.dbInstanceId
+    - DB Instance Group ID: data.dbInstanceGroupId
+    - DB Instance Name: data.dbInstanceName
+    - Description: data.description
+    - DB Version: data.dbVersion
+    - DB Port: data.dbPort
+    - DB Instance Type: data.dbInstanceType
+    - DB Instance Status: data.dbInstanceStatus
+    - Progress Status: data.progressStatus
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt

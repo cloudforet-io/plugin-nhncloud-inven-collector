@@ -1,0 +1,16 @@
+search:
+  fields:
+    - Notification Group ID: data.notificationGroupId
+    - Notification Group Name: data.notificationGroupName
+table:
+  sort:
+    key: data.notificationGroupId
+    desc: false
+  fields:
+    - Notification Group ID: data.notificationGroupId
+    - Notification Group Name: data.notificationGroupName
+    - Notify Email: data.notifyEmail
+    - Notify SMS: data.notifySms
+    - Is Enabled: data.isEnabled
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt
