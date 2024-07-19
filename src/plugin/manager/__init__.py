@@ -16,3 +16,4 @@ from plugin.manager.dns_plus.dns_zone_manager import DNSZoneManager
 from plugin.manager.dns_plus.gslb_manager import GSLBManager
 from plugin.manager.dns_plus.pool_manager import PoolManager
 from plugin.manager.dns_plus.health_check_manager import HealthCheckManager
+from plugin.manager.certificate_manager.certificate_manager import CertificateManager
