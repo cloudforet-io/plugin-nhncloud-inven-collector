@@ -1,0 +1,34 @@
+search:
+  fields:
+    - IP ID: data.id
+    - IP Address: data.floating_ip_address
+    - Tenant ID: data.tenant_id
+    - VPC State: data.status
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - IP ID: data.id
+    - IP Address: data.floating_ip_address
+    - Tenant ID: data.tenant_id
+    - VPC State: data.status
+    - Description: data.description
+    - Router ID: data.router_id
+    - Port ID: data.port_id
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - IP ID: data.id
+    - IP Address: data.floating_ip_address
+    - Tenant ID: data.tenant_id
+    - VPC State: data.status
+    - Description: data.description
+    - Router ID: data.router_id
+    - Port ID: data.port_id
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
