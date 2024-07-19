@@ -1,0 +1,13 @@
+search:
+  fields:
+    - HOSTS: data.hosts
+    - ZONE NAME: data.zoneName
+    - STATE: data.zoneState.available
+table:
+  sort:
+    key: data.zoneName
+    desc: false
+  fields:
+    - HOSTS: data.hosts
+    - ZONE NAME: data.zoneName
+    - STATE: data.zoneState.available
