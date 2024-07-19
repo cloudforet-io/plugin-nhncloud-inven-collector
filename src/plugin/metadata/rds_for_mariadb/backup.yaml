@@ -1,0 +1,20 @@
+search:
+  fields:
+    - Backup ID: data.backupId
+    - Backup Name: data.backupName
+    - DB Instance ID: data.dbInstanceId
+    - DB Version: data.dbVersion
+table:
+  sort:
+    key: data.backupId
+    desc: false
+  fields:
+    - Backup ID: data.backupId
+    - Backup Name: data.backupName
+    - Backup Status: data.datatatus
+    - DB Instance ID: data.dbInstanceId
+    - DB Version: data.dbVersion
+    - Backup Type: data.backupType
+    - Backup Size: data.dataize
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt

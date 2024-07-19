@@ -1,0 +1,15 @@
+search:
+  fields:
+    - DB Security Group ID: data.dbSecurityGroupId
+    - DB Security Group Name: data.dbSecurityGroupName
+table:
+  sort:
+    key: data.dbSecurityGroupId
+    desc: false
+  fields:
+    - DB Security Group ID: data.dbSecurityGroupId
+    - DB Security Group Name: data.dbSecurityGroupName
+    - Description: data.description
+    - Progress Status: data.progressStatus
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt

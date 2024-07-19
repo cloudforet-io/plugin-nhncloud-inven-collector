@@ -17,3 +17,10 @@ from plugin.manager.dns_plus.gslb_manager import GSLBManager
 from plugin.manager.dns_plus.pool_manager import PoolManager
 from plugin.manager.dns_plus.health_check_manager import HealthCheckManager
 from plugin.manager.certificate_manager.certificate_manager import CertificateManager
+from plugin.manager.rds_for_mariadb.db_instance_group_manager import DBInstanceGroupManager
+from plugin.manager.rds_for_mariadb.db_instance_manager import DBInstanceManager
+from plugin.manager.rds_for_mariadb.db_security_group_manager import DBSecurityGroupManager
+from plugin.manager.rds_for_mariadb.parameter_group_manager import ParameterGroupManager
+from plugin.manager.rds_for_mariadb.backup_manager import BackupManager
+from plugin.manager.rds_for_mariadb.user_group_manager import UserGroupManager
+from plugin.manager.rds_for_mariadb.notification_group_manager import NotificationGroupManager

@@ -1,0 +1,13 @@
+search:
+  fields:
+    - DB Instance Group ID: data.dbInstanceGroupId
+    - Replication Type: data.replicationType
+table:
+  sort:
+    key: data.dbInstanceGroupId
+    desc: false
+  fields:
+    - DB Instance Group ID: data.dbInstanceGroupId
+    - Replication Type: data.replicationType
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt
