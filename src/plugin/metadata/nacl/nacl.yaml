@@ -1,0 +1,30 @@
+search:
+  fields:
+    - ACL ID: data.id
+    - ACL Name: data.name
+    - Tenant ID: data.tenant_id
+    - Create Date: data.created_at
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ACL ID: data.id
+    - ACL Name: data.name
+    - Tenant ID: data.tenant_id
+    - Description: data.description
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
+    - Revision Number: data.revision_number
+
+tabs.0:
+  name: Detail
+  type: table
+  fields:
+    - ACL ID: data.id
+    - ACL Name: data.name
+    - Tenant ID: data.tenant_id
+    - Description: data.description
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
+    - Revision Number: data.revision_number

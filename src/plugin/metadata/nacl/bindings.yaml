@@ -1,0 +1,26 @@
+search:
+  fields:
+    - Binding ID: data.id
+    - Tenant ID: data.tenant_id
+    - ACL ID: data.acl_id
+    - Network ID: data.network_id
+    - Project ID: data.project_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Binding ID: data.id
+    - Tenant ID: data.tenant_id
+    - ACL ID: data.acl_id
+    - Network ID: data.network_id
+    - Project ID: data.project_id
+tabs.0:
+  name: Detail
+  type: table
+  fields:
+    - Binding ID: data.id
+    - Tenant ID: data.tenant_id
+    - ACL ID: data.acl_id
+    - Network ID: data.network_id
+    - Project ID: data.project_id
