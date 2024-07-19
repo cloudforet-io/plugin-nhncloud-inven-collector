@@ -1,0 +1,20 @@
+search:
+  fields:
+    - LoadBalancer ID: data.id
+    - LoadBalancer Name: data.name
+    - Tenant ID: data.tenant_id
+    - Provisioning Status: data.provisioning_status
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - LoadBalancer ID: data.id
+    - LoadBalancer Name: data.name
+    - Tenant ID: data.tenant_id
+    - Provisioning Status: data.provisioning_status
+    - Operating Status: data.operating_status
+    - Provider: data.provider
+    - LoadBalancer Type: data.loadbalancer_type
+    - Description: data.description
+    - Distributed: data.distributed

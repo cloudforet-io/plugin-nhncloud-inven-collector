@@ -1,0 +1,21 @@
+search:
+  fields:
+    - Member ID: data.id
+    - Tenant ID: data.tenant_id
+    - Address: data.address
+    - Protocol Port: data.protocol_port
+    - Operating Status: data.operating_status
+    - Subnet ID: data.subnet_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Member ID: data.id
+    - Tenant ID: data.tenant_id
+    - Address: data.address
+    - Protocol Port: data.protocol_port
+    - Operating Status: data.operating_status
+    - Subnet ID: data.subnet_id
+    - Admin State Up: data.admin_state_up
+    - Weight: data.weight

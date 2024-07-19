@@ -1,0 +1,22 @@
+search:
+  fields:
+    - Policy ID: data.id
+    - Policy Name: data.name
+    - Action: data.action
+    - Tenant ID: data.tenant_id
+    - Listener ID: data.listener_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Policy ID: data.id
+    - Policy Name: data.name
+    - Action: data.action
+    - Tenant ID: data.tenant_id
+    - Listener ID: data.listener_id
+    - Redirect URL: data.redirect_url
+    - Redirect Pool ID: redirect_pool_id
+    - Description: data.description
+    - Admin State Up: data.admin_state_up
+    - Position: data.position

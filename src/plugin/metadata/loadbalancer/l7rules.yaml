@@ -1,0 +1,23 @@
+search:
+  fields:
+    - Rule ID: data.id
+    - Compare Type: data.compare_type
+    - Action: data.action
+    - Tenant ID: data.tenant_id
+    - Invert: data.invert
+    - Key: data.key
+    - Value: data.value
+    - Type: data.type
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Rule ID: data.id
+    - Compare Type: data.compare_type
+    - Action: data.action
+    - Tenant ID: data.tenant_id
+    - Invert: data.invert
+    - Key: data.key
+    - Value: data.value
+    - Type: data.type

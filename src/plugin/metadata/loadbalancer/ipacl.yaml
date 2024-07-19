@@ -1,0 +1,16 @@
+search:
+  fields:
+    - IP ACL Target ID: data.id
+    - IP ACL Group ID: data.ipacl_group_id
+    - Tenant ID: data.tenant_id
+    - CIDR Address: cidr_address
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - IP ACL Target ID: data.id
+    - IP ACL Group ID: data.ipacl_group_id
+    - Tenant ID: data.tenant_id
+    - CIDR Address: cidr_address
+    - Description: data.description
