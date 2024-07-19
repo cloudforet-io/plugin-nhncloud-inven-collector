@@ -1,0 +1,39 @@
+search:
+  fields:
+    - VPC ID: data.id
+    - VPC Name: data.name
+    - Tenant ID: data.tenant_id
+    - VPC State: data.state
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - VPC ID: data.id
+    - VPC Name: data.name
+    - Tenant ID: data.tenant_id
+    - VPC State: data.state
+    - CIDRv4: data.cidrv4
+    - Shared : data.shared
+    - Create Date: data.create_time
+
+tabs.1:
+  name: Routing Tables
+  type: table
+  root_path: data.routingtables
+  fields:
+    - ID: id
+    - Name: name
+    - Default Table: default_table
+
+tabs.2:
+  name: Subnets
+  type: table
+  root_path: data.subnets
+  fields:
+    - ID: id
+    - Name: name
+    - Available IP Count: available_ip_count
+    - CIDR: cidr
+    - Gateway: gateway
+    - State: state
