@@ -1,0 +1,15 @@
+search:
+  fields:
+    - Endpoint ID: data.id
+    - Endpoint Name: data.name
+    - Description: data.description
+    - Display Name: data.display_name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Endpoint ID: data.id
+    - Endpoint Name: data.name
+    - Description: data.description
+    - Display Name: data.display_name
