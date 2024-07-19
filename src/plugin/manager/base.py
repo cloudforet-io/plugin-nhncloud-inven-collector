@@ -74,7 +74,7 @@ class NHNCloudBaseManager(BaseManager):
 
         yield make_response(
             cloud_service_type=cloud_service_type,
-            match_keys=[["name", "reference.resource_id", "account", "provider"]],
+            match_keys=[["name", "group", "account", "provider"]],
             resource_type="inventory.CloudServiceType",
         )
 
@@ -87,7 +87,7 @@ class NHNCloudBaseManager(BaseManager):
             total_resources.append(
                 make_response(
                     cloud_service=cloud_service,
-                    match_keys=[["name", "reference.resource_id", "account", "provider"]],
+                    match_keys=[["name", "reference.resource_id", "account", "provider", "cloud_service_group"]],
                     resource_type="inventory.CloudService",
                 )
             )
