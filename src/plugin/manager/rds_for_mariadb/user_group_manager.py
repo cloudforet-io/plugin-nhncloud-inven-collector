@@ -25,11 +25,12 @@ class UserGroupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mariadb.png"
-            }
+            },
+            
         )
 
         return cloud_service_type
@@ -44,12 +45,12 @@ class UserGroupManager(NHNCloudBaseManager):
                 user_groups = user_group_connector.list_user_groups(secret_data.get("app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"), AVAILABLE_REGION)
             for user_group in user_groups:
                 reference = {
-                    "resource_id": user_group.get("userGroups"),
+                    "resource_id": user_group.get("userGroupId"),
                     "external_link": ""
                 }
                 
                 cloud_service = make_cloud_service(
-                    name=user_group["userGroupId"],
+                    name=user_group["userGroupName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,

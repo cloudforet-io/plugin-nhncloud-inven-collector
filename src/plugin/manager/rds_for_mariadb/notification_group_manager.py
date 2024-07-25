@@ -25,11 +25,12 @@ class NotificationGroupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mariadb.png"
-            }
+            },
+            
         )
 
         return cloud_service_type
@@ -44,12 +45,12 @@ class NotificationGroupManager(NHNCloudBaseManager):
                 notification_groups = notification_group_connector.list_notification_groups(secret_data.get("app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"), AVAILABLE_REGION)
             for notification_group in notification_groups:
                 reference = {
-                    "resource_id": notification_group.get("notificationGroups"),
+                    "resource_id": notification_group.get("notificationGroupId"),
                     "external_link": ""
                 }
                 
                 cloud_service = make_cloud_service(
-                    name=notification_group["notificationGroupId"],
+                    name=notification_group["notificationGroupName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,

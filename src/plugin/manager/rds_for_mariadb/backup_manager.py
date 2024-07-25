@@ -25,11 +25,12 @@ class BackupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
+            is_primary=False,
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mariadb.png"
-            }
+            },
+            
         )
 
         return cloud_service_type
@@ -45,12 +46,12 @@ class BackupManager(NHNCloudBaseManager):
             
             for backup in backups:
                 reference = {
-                    "resource_id": backup.get("backups"),
+                    "resource_id": backup.get("backupId"),
                     "external_link": ""
                 }
                 
                 cloud_service = make_cloud_service(
-                    name=backup["backupId"],
+                    name=backup["backupName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,

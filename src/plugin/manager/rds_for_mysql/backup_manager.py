@@ -25,11 +25,12 @@ class BackupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
+            is_primary=False,
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mysql.png"
-            }
+            },
+            
         )
 
         return cloud_service_type
@@ -44,12 +45,12 @@ class BackupManager(NHNCloudBaseManager):
                 backups = backup_connector.list_backups(secret_data.get("app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"), AVAILABLE_REGION)
             for backup in backups:
                 reference = {
-                    "resource_id": backup.get("backups"),
+                    "resource_id": backup.get("backupId"),
                     "external_link": ""
                 }
                 
                 cloud_service = make_cloud_service(
-                    name=backup["backupId"],
+                    name=backup["backupName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,

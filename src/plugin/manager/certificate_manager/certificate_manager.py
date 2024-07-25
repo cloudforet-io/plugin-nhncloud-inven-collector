@@ -27,7 +27,8 @@ class CertificateManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/certificate_manager.png"
-            }
+            },
+            labels=["Management", "Security"]
         )
 
         return cloud_service_type
@@ -43,7 +44,7 @@ class CertificateManager(NHNCloudBaseManager):
 
         for certificate in certificates:
             reference = {
-                    "resource_id": certificate.get("certificateId"),
+                    "resource_id": certificate.get("certificateName"),
                     "external_link": ""
                     }
             cloud_service = make_cloud_service(

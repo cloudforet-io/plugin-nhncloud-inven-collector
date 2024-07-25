@@ -25,11 +25,12 @@ class DBInstanceGroupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mysql.png"
-            }
+            },
+            
         )
 
         return cloud_service_type
@@ -44,7 +45,7 @@ class DBInstanceGroupManager(NHNCloudBaseManager):
                 db_instance_groups = db_instance_group_connector.list_db_instance_groups(secret_data.get("app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"), AVAILABLE_REGION)
             for db_instance_group in db_instance_groups:
                 reference = {
-                    "resource_id": db_instance_group.get("dbInstanceGroups"),
+                    "resource_id": db_instance_group.get("dbInstanceGroupId"),
                     "external_link": ""
                 }
                 

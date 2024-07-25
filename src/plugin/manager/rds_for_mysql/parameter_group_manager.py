@@ -25,11 +25,12 @@ class ParameterGroupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mysql.png"
-            }
+            },
+            
         )
 
         return cloud_service_type
@@ -44,12 +45,12 @@ class ParameterGroupManager(NHNCloudBaseManager):
                 parameter_groups = parameter_group_connector.list_parameter_groups(secret_data.get("app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"), AVAILABLE_REGION)
             for parameter_group in parameter_groups:
                 reference = {
-                    "resource_id": parameter_group.get("parameterGroups"),
+                    "resource_id": parameter_group.get("parameterGroupId"),
                     "external_link": ""
                 }
                 
                 cloud_service = make_cloud_service(
-                    name=parameter_group["parameterGroupId"],
+                    name=parameter_group["parameterGroupName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,

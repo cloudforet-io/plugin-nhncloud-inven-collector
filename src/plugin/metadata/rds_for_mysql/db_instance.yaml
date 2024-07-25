@@ -12,11 +12,52 @@ table:
     - DB Instance ID: data.dbInstanceId
     - DB Instance Group ID: data.dbInstanceGroupId
     - DB Instance Name: data.dbInstanceName
-    - Description: data.description
-    - DB Version: data.dbVersion
-    - DB Port: data.dbPort
     - DB Instance Type: data.dbInstanceType
-    - DB Instance Status: data.dbInstanceStatus
-    - Progress Status: data.progressStatus
     - Created Date: data.createdYmdt
     - Updated Date: data.updatedYmdt
+tabs.0:
+    name: Details
+    items:
+      - name: Details
+        type: item
+        fields:
+          - DB Instance ID: data.dbInstanceId
+          - DB Instance Group ID: data.dbInstanceGroupId
+          - DB Instance Name: data.dbInstanceName
+          - Description: data.description
+          - DB Version: data.dbVersion
+          - DB Port: data.dbPort
+          - DB Instance Type: data.dbInstanceType
+          - DB Instance Status: data.dbInstanceStatus
+          - Progress Status: data.progressStatus
+          - Created Date: data.createdYmdt
+          - Updated Date: data.updatedYmdt
+
+tabs.1:
+  name: Schemas
+  items:
+    - name: Schemas
+      type: simple-table
+      root_path: data.schemas
+      fields:
+        - DB Schema ID: dbSchemaId
+        - DB Schema Name: dbSchemaName
+        - DB Schema Status: dbSchemaStatus
+        - Created Date: createdYmdt
+
+tabs.2:
+  name: Users
+  items:
+    - name: Users
+      type: simple-table
+      root_path: data.users
+      fields:
+        - DB User ID: dbUserId
+        - DB User Name: dbUserName
+        - Host: host
+        - Authority Type: authorityType
+        - DB User Status: dbUserStatus
+        - Authentication Plugin: authenticationPlugin
+        - TLS Option: tlsOption
+        - Created Date: createdYmdt
+        - Updated Date: updatedYmdt

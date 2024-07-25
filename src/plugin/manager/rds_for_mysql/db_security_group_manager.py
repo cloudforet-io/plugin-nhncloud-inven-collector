@@ -25,11 +25,12 @@ class DBSecurityGroupManager(NHNCloudBaseManager):
             group=self.cloud_service_group,
             provider=self.provider,
             metadata_path=self.metadata_path,
-            is_primary=True,
-            is_major=True,
+            is_primary=False,
+            is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mysql.png"
-            }
+            },
+            labels=["Security"]
         )
 
         return cloud_service_type
@@ -44,12 +45,12 @@ class DBSecurityGroupManager(NHNCloudBaseManager):
                 db_security_groups = db_security_group_connector.list_db_security_groups(secret_data.get("app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"), AVAILABLE_REGION)
             for db_security_group in db_security_groups:
                 reference = {
-                    "resource_id": db_security_group.get("dbSecurityGroups"),
+                    "resource_id": db_security_group.get("dbSecurityGroupId"),
                     "external_link": ""
                 }
                 
                 cloud_service = make_cloud_service(
-                    name=db_security_group["dbSecurityGroupId"],
+                    name=db_security_group["dbSecurityGroupName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,
