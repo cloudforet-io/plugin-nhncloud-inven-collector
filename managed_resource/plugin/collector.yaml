@@ -1,0 +1,11 @@
+---
+capability: {}
+image: YOUR_DOCKERHUB_REPO/plugin-nhncloud-inven-collector
+labels: []
+name: NHN Cloud Collector
+plugin_id: plugin-nhncloud-inven-collector
+provider: nhncloud
+registry_type: DOCKER_HUB
+resource_type: inventory.Collector
+tags:
+  icon: https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud/logo.png
