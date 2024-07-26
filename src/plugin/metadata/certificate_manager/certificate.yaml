@@ -1,0 +1,13 @@
+search:
+  fields:
+    - Certificate Name: data.certificateName
+table:
+  sort:
+    key: data.certificateName
+    desc: false
+  fields:
+    - Certificate Name: data.certificateName
+    - Authority: data.authority
+    - Signature Algorithm: data.signatureAlgorithm
+    - File Creation Date: data.fileCreationDate
+    - Expiration Date: data.expirationDate

@@ -1,0 +1,28 @@
+search:
+  fields:
+    - Parameter Group ID: data.parameterGroupId
+    - Parameter Group Name: data.parameterGroupName
+    - DB Version: data.dbVersion
+table:
+  sort:
+    key: data.parameterGroupId
+    desc: false
+  fields:
+    - Parameter Group ID: data.parameterGroupId
+    - Parameter Group Name: data.parameterGroupName
+    - Parameter Group Status: data.parameterGroupStatus
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt
+tabs.0:
+    name: Details
+    items:
+      - name: Details
+        type: item
+        fields:
+          - Parameter Group ID: data.parameterGroupId
+          - Parameter Group Name: data.parameterGroupName
+          - Description: data.description
+          - DB Version: data.dbVersion
+          - Parameter Group Status: data.parameterGroupStatus
+          - Created Date: data.createdYmdt
+          - Updated Date: data.updatedYmdt

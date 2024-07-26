@@ -1,0 +1,13 @@
+search:
+  fields:
+    - User Group ID: data.userGroupId
+    - User Group Name: data.userGroupName
+table:
+  sort:
+    key: data.userGroupId
+    desc: false
+  fields:
+    - User Group ID: data.userGroupId
+    - User Group Name: data.userGroupName
+    - Created Date: data.createdYmdt
+    - Updated Date: data.updatedYmdt
