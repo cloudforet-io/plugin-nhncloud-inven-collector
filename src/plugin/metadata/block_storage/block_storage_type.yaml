@@ -1,0 +1,15 @@
+search:
+  fields:
+    - Volume ID: data.id
+    - Volume Name: data.name
+    - Description: data.description
+    - OS Volume Type Access: data.os-volume-type-access:is_public
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Volume ID: data.id
+    - Volume Name: data.name
+    - Description: data.description
+    - OS Volume Type Access: data.os-volume-type-access:is_public
