@@ -1,0 +1,218 @@
+widget:
+  - name: Count by Availability Zone
+    type: chart
+    options:
+      chart_type: COLUMN
+      name_options:
+        key: name
+        reference:
+          reference_key: data.availability_zone
+          resource_type: inventory.AvailabilityZone
+        type: text
+    query:
+      aggregate:
+        - group:
+            fields:
+              - name: value
+                operator: count
+            keys:
+              - key: data.availability_zone
+                name: name
+      filter:
+        - key: data.status
+          operator: eq
+          value: ACTIVE
+
+  - name: Count by Flavor
+    type: chart
+    options:
+      chart_type: TREEMAP
+      name_options:
+        key: name
+        type: text
+    query:
+      aggregate:
+        - group:
+            keys:
+              - name: name
+                key: data.flavor.id
+            fields:
+              - name: value
+                operator: count
+      filter:
+        - key: data.status
+          operator: eq
+          value: ACTIVE
+
+  - name: Count by Key Pair
+    type: chart
+    options:
+      chart_type: DONUT
+    query:
+      aggregate:
+        - group:
+            fields:
+              - name: value
+                operator: count
+            keys:
+              - key: data.key_name
+                name: name
+      filter:
+        - key: data.key_name
+          value: true
+          operator: exists
+        - key: data.status
+          operator: eq
+          value: ACTIVE
+
+  - name: Total Active Servers
+    type: card
+    options:
+      value_options:
+        key: value
+        options:
+          default: '0'
+        type: text
+    query:
+      aggregate:
+        - count:
+            name: value
+      filter:
+        - key: data.status
+          value: ACTIVE
+          operator: eq
+
+search:
+  fields:
+    - IP Address: data.addresses.vpc2.addr
+    - Instance ID: data.id
+    - Instance State: data.status
+    - Instance Type: data.flavor.id
+    - Key Pair: data.key_name
+    - Image: data.image.id
+    - Availability Zone: data.OS-EXT-AZ:availability_zone
+    - OS Type: data.metadata.os_type
+    - OS Details: data.metadata.description
+    - OS Architecture: data.metadata.os_architecture
+    - Volume Size: data.metadata.volume_size
+    - Tenant ID: data.tenant_id
+    - User ID: data.user_id
+    - Launched At: data.OS-SRV-USG:launched_at
+      type: datetime
+      source_type: iso8601
+    - Created: data.created
+      type: datetime
+      source_type: iso8601
+
+table:
+  sort:
+    key: data.id
+    desc: true
+  fields:
+    - Instance State: data.status
+      type: enum
+      enums:
+        - ACTIVE: green.500
+          type: state
+        - BUILD: yellow.500
+          type: state
+        - SHUTOFF: red.500
+          type: state
+        - REBOOT: yellow.500
+          type: state
+    - Instance Type: data.flavor.id
+    - Instance ID: data.id
+    - Key Pair: data.key_name
+      is_optional: true
+    - Image: data.image.id
+      is_optional: true
+    - Availability Zone: data.OS-EXT-AZ:availability_zone
+    - OS Type: data.metadata.os_type
+      is_optional: true
+    - OS Details: data.metadata.description
+      is_optional: true
+    - OS Architecture: data.metadata.os_architecture
+      is_optional: true
+    - Volume Size: data.metadata.volume_size
+    - Launched At: data.OS-SRV-USG:launched_at
+      type: datetime
+      source_type: iso8601
+    - Created: data.created
+      type: datetime
+      source_type: iso8601
+
+tabs.0:
+  name: Instance Details
+  type: item
+  fields:
+    - Instance ID: data.id
+    - Instance State: data.status
+      type: enum
+      enums:
+        - ACTIVE: green.500
+          type: state
+        - BUILD: yellow.500
+          type: state
+        - SHUTOFF: red.500
+          type: state
+        - REBOOT: yellow.500
+          type: state
+    - Instance Type: data.flavor.id
+    - Key Pair: data.key_name
+    - Image: data.image.id
+    - Availability Zone: data.OS-EXT-AZ:availability_zone
+    - Launched At: data.OS-SRV-USG:launched_at
+      type: datetime
+      source_type: iso8601
+    - Created: data.created
+      type: datetime
+      source_type: iso8601
+
+tabs.1:
+  name: Volumes
+  type: table
+  root_path: data.volumes
+  fields:
+    - ID: id
+    - Device: device
+    - Server ID: serverId
+    - Volume ID: volumeId
+
+tabs.2:
+  name: Operating System
+  type: item
+  root_path: data.metadata
+  fields:
+    - OS Type: os_type
+    - OS Details: description
+    - OS Distribution: os_version
+    - OS Architecture: os_architecture
+
+
+tabs.3:
+  name: Network
+  type: table
+  root_path: data.addresses.vpc2
+  fields:
+    - MAC Address: OS-EXT-IPS-MAC:mac_addr
+    - IP Address: addr
+    - Type: OS-EXT-IPS:type
+
+tabs.4:
+  name: Security Groups
+  type: table
+  root_path: data.security_groups
+  fields:
+    - Name: name
+
+tabs.5:
+  name: Metadata
+  type: item
+  root_path: data.metadata
+  fields:
+    - Project Domain: project_domain
+    - Hypervisor Type: hypervisor_type
+    - Monitoring Agent: monitoring_agent
+    - Image Name: image_name
+    - Login Username: login_username
+    - TC Environment: tc_env

@@ -1,0 +1,38 @@
+search:
+  fields:
+    - Image ID: data.id
+    - Image Name: data.name
+    - Owner ID: data.owner
+    - Image Name: data.name
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Image ID: data.id
+    - Image Name: data.name
+    - Status: data.status
+    - Owner ID: data.owner
+    - OS_Distro: data.os_distro
+    - OS_Architecture : data.os_architecture
+    - Create Date: data.created_at
+    - Visibility: data.visibility
+
+tabs.0:
+  name: Detail
+  type: item
+  fields:
+    - Image ID: data.id
+    - Image Name: data.name
+    - Image Size: data.size
+    - Status: data.status
+    - Owner ID: data.owner
+    - OS_Distro: data.os_distro
+    - OS_Architecture: data.os_architecture
+    - OS_Type: data.os_type
+    - Container Format: data.container_format
+    - Min Disk: data.min_disk
+    - Create Date: data.created_at
+    - Updated_At: data.updated_at
+    - Visibility: data.visibility
+    - Description: data.description
