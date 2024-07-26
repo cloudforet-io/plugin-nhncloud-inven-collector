@@ -43,7 +43,7 @@ class PushTagManager(NHNCloudBaseManager):
             }
 
             cloud_service = make_cloud_service(
-                name=tag["tagId"],
+                name=tag["tagName"],
                 cloud_service_type=self.cloud_service_type,
                 cloud_service_group=self.cloud_service_group,
                 provider=self.provider,
