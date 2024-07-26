@@ -1,0 +1,35 @@
+search:
+  fields:
+    - SG ID: data.id
+    - SG Name: data.name
+    - Tenant ID: data.tenant_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - SG ID: data.id
+    - SG Name: data.name
+    - Tenant ID: data.tenant_id
+    - Description: data.description
+
+tabs.0:
+  name: Rules
+  type: table
+  root_path: data.security_group_rules
+  fields:
+    - ID: id
+    - Direction: direction
+      type: enum
+      enums:
+        - ingress: coral.600
+        - egress: indigo.500
+    - Protocol: protocol
+    - Description: description
+    - Port Range Min: port_range_min
+    - Port Range Max: port_range_max
+    - Remote Group ID: remote_group_id
+    - Remote IP Prefix: remote_ip_prefix
+    - Security Group ID: security_group_id
+    - Tenant ID: tenant_id
+    - Ethertype: ethertype

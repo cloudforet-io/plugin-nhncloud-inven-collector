@@ -1,0 +1,46 @@
+search:
+  fields:
+    - Security Rules ID: data.id
+    - Direction: data.direction
+    - Protocol: data.protocol
+    - Tenant ID: data.tenant_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ID: data.id
+    - Direction: data.direction
+      type: enum
+      enums:
+        - ingress: coral.600
+        - egress: indigo.500
+    - Protocol: data.protocol
+    - Description: data.description
+    - Port Range Min: data.port_range_min
+    - Port Range Max: data.port_range_max
+    - Remote Group ID: data.remote_group_id
+    - Remote IP Prefix: data.remote_ip_prefix
+    - Security Group ID: data.security_group_id
+    - Tenant ID: data.tenant_id
+    - Ethertype: data.ethertype
+
+tabs.0:
+  name: Detail
+  type: table
+  fields:
+    - ID: data.id
+    - Direction: data.direction
+      type: enum
+      enums:
+        - ingress: coral.600
+        - egress: indigo.500
+    - Protocol: data.protocol
+    - Description: data.description
+    - Port Range Min: data.port_range_min
+    - Port Range Max: data.port_range_max
+    - Remote Group ID: data.remote_group_id
+    - Remote IP Prefix: data.remote_ip_prefix
+    - Security Group ID: data.security_group_id
+    - Tenant ID: data.tenant_id
+    - Ethertype: data.ethertype

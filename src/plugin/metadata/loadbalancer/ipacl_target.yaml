@@ -1,0 +1,18 @@
+search:
+  fields:
+    - IP ACL ID: data.id
+    - IP ACL Name: data.name
+    - Tenant ID: data.tenant_id
+    - Action: data.action
+    - Target Count: data.ipacl_target_count
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - IP ACL ID: data.id
+    - IP ACL Name: data.name
+    - Tenant ID: data.tenant_id
+    - Action: data.action
+    - Target Count: data.ipacl_target_count
+    - Description: data.description

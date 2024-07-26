@@ -1,0 +1,47 @@
+search:
+  fields:
+    - Gateway ID: data.id
+    - Gateway Name: data.name
+    - Tenant ID: data.tenant_id
+    - Status: data.status
+    - Service Endpoint ID: data.service_endpoint_id
+    - Create Date: data.create_time
+    - Project ID: data.project_id
+    - Port ID: data.port_id
+    - Fixed IP: data.fixed_ip
+    - Network ID: data.network_id
+    - Subnet ID: data.subnet_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Gateway ID: data.id
+    - Gateway Name: data.name
+    - Tenant ID: data.tenant_id
+    - Status: data.status
+    - Service Endpoint ID: data.service_endpoint_id
+
+tabs.0:
+  name: Detail
+  type: item
+  fields:
+    - Gateway ID: data.id
+    - Gateway Name: data.name
+    - Tenant ID: data.tenant_id
+    - Status: data.status
+    - Service Endpoint ID: data.service_endpoint_id
+    - Create Date: data.create_time
+    - Project ID: data.project_id
+    - Port ID: data.port_id
+    - Fixed IP: data.fixed_ip
+    - Network ID: data.network_id
+    - Subnet ID: data.subnet_id
+    - Description: data.description
+
+tabs.1:
+  name: API EndPoints
+  type: table
+  root_path: data.api_endpoints
+  fields:
+    - Domain Name: domain_name

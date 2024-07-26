@@ -1,0 +1,30 @@
+search:
+  fields:
+    - Routing Table ID: data.id
+    - Routing Table Name: data.name
+    - Tenant ID: data.tenant_id
+    - Routing Table State: data.state
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Routing Table ID: data.id
+    - Routing Table Name: data.name
+    - Tenant ID: data.tenant_id
+    - Gateway ID: data.gateway_id
+    - Routing Table State: data.state
+    - Create Date: data.create_time
+    - Default: data.default_table
+    - Distributed: data.distributed
+
+tabs.0:
+  name: Routes
+  type: table
+  root_path: data.routes
+  fields:
+    - ID: id
+    - Subnet ID: subnet_id
+    - CIDR: cidr
+    - Gateway: gateway
+    - Tenant ID: tenant_id

@@ -1,0 +1,42 @@
+search:
+  fields:
+    - Subnet ID: data.id
+    - Subnet Name: data.name
+    - Tenant ID: data.tenant_id
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Subnet ID: data.id
+    - Subnet Name: data.name
+    - Tenant ID: data.tenant_id
+    - VPC ID: data.vpc_id
+    - Subnet State: data.state
+    - CIDR: data.cidr
+    - Shared : data.shared
+    - Create Date: data.create_time
+    - Gateway IP: data.gateway
+    - Available IP Count: data.available_ip_count
+    - Router External: data.router:external
+
+tabs.0:
+  name: Routes
+  type: table
+  root_path: data.routes
+  fields:
+    - ID: id
+    - Subnet ID: subnet_id
+    - CIDR: cidr
+    - Gateway: gateway
+    - Tenant ID: tenant_id
+
+tabs.1:
+  name: Routing Tables
+  type: table
+  root_path: data.routingtables
+  fields:
+    - ID: id
+    - Name: name
+    - Default Table: default_table
+    - Gateway ID: gateway_id

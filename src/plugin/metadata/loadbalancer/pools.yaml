@@ -1,0 +1,21 @@
+search:
+  fields:
+    - Pools ID: data.id
+    - Pools Name: data.name
+    - Tenant ID: data.tenant_id
+    - Protocol: data.protocol
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Pools ID: data.id
+    - Pools Name: data.name
+    - Tenant ID: data.tenant_id
+    - Protocol: data.protocol
+    - Member Port: data.member_port
+    - Health Monitor ID: data.healthmonitor_id
+    - Description: data.description
+    - Admin State Up: data.admin_state_up
+    - LB Algorithm: data.lb_algorithm
+    - Session Persistence: data.session_persistence

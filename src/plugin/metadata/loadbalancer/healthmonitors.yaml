@@ -1,0 +1,21 @@
+search:
+  fields:
+    - Monitor ID: data.id
+    - Type: data.type
+    - Health Check Port: data.health_check_port
+    - HTTP Method: data.http_method
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - Monitor ID: data.id
+    - Type: data.type
+    - Health Check Port: data.health_check_port
+    - HTTP Method: data.http_method
+    - Expected Codes: data.expected_codes
+    - Max Retries: data.max_retries
+    - Delay: data.delay
+    - Timeout: data.timeout
+    - URL Path: data.url_path
+    - Admin State Up: data.admin_state_up

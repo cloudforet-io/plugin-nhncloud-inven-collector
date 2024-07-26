@@ -1,0 +1,40 @@
+search:
+  fields:
+    - ACL Rule ID: data.id
+    - Tenant ID: data.tenant_id
+    - Create Date: data.created_at
+    - Source IP: data.src_ip
+    - Destination IP: data.dst_ip
+table:
+  sort:
+    key: data.id
+    desc: false
+  fields:
+    - ACL Rule ID: data.id
+    - Protocol: data.protocol
+    - Ether Type: data.ethertype
+    - ACL ID: data.acl_id
+    - Source IP: data.src_ip
+    - Destination IP: data.dst_ip
+    - Create Date: data.created_at
+
+tabs.0:
+  name: Detail
+  type: table
+  fields:
+    - ACL Rule ID: data.id
+    - Tenant ID: data.tenant_id
+    - Protocol: data.protocol
+    - Ether Type: data.ethertype
+    - ACL ID: data.acl_id
+    - Source IP: data.src_ip
+    - Source Port Range Min: data.src_port_range_min
+    - Source Port Range Max: data.src_port_range_max
+    - Destination IP: data.dst_ip
+    - Destination Port Range Min: data.dst_port_range_min
+    - Destination Port Range Max: data.dst_port_range_max
+    - Description: data.description
+    - Create Date: data.created_at
+    - Update Date: data.updated_at
+    - Revision Number: data.revision_number
+    - Remote group id: data.remote_group_id
