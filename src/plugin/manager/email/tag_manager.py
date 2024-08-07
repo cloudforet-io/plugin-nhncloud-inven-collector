@@ -27,7 +27,8 @@ class TagManager(NHNCloudBaseManager):
             is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/email.png"
-            }
+            },
+            labels=["Application Integration"]
         )
 
         return cloud_service_type

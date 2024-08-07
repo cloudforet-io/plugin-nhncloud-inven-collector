@@ -27,7 +27,8 @@ class PoolManager(NHNCloudBaseManager):
             is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/dns_plus.png"
-            }
+            },
+            labels=["Networking"]
         )
         return cloud_service_type
 

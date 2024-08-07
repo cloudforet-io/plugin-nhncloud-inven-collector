@@ -30,7 +30,7 @@ class DBSecurityGroupManager(NHNCloudBaseManager):
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mysql.png"
             },
-            labels=["Security"]
+            labels=["Security", "Management"]
         )
 
         return cloud_service_type

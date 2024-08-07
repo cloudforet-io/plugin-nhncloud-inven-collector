@@ -30,7 +30,8 @@ class BlockStorageTypeManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/block_storage.png"
-            }
+            },
+            labels=["Management"]
         )
 
         return cloud_service_type

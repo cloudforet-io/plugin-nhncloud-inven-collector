@@ -28,7 +28,8 @@ class SharedMulticastDomainManager(NHNCloudBaseManager):
             is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/transit_hub.png"
-            }
+            },
+            labels=["Networking"]
         )
 
         return cloud_service_type

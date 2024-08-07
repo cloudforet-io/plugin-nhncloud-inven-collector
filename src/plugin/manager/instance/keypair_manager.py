@@ -30,7 +30,8 @@ class KeyPairManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/instance.png"
-            }
+            },
+            labels=["Compute"]
         )
 
         return cloud_service_type
