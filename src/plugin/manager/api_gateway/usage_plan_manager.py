@@ -28,7 +28,8 @@ class UsagePlanManager(NHNCloudBaseManager):
             is_major=False,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/api_gateway.png"
-            }
+            },
+            labels=["Networking", "Analytics"]
         )
 
         return cloud_service_type

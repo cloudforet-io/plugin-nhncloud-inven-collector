@@ -30,7 +30,8 @@ class NACLBindingsManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/network_acl.png"
-            }
+            },
+            labels=["Networking", "Security"]
         )
 
         return cloud_service_type

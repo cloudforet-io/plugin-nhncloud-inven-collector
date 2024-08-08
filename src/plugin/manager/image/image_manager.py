@@ -30,7 +30,8 @@ class ImageManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/image.png"
-            }
+            },
+            labels=["Compute"]
         )
 
         return cloud_service_type

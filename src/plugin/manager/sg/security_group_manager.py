@@ -30,7 +30,8 @@ class SGManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/security_group.png"
-            }
+            },
+            labels=["Security", "Networking"]
         )
         return cloud_service_type
 

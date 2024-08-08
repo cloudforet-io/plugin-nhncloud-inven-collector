@@ -30,7 +30,7 @@ class UserGroupManager(NHNCloudBaseManager):
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mysql.png"
             },
-            
+            labels=["Management", "Security"]
         )
 
         return cloud_service_type

@@ -30,7 +30,8 @@ class LoadBalancerPoolsManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/load_balancer.png"
-            }
+            },
+            labels=["Networking"]
         )
 
         return cloud_service_type

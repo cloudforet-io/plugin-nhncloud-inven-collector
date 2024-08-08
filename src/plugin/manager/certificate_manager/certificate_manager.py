@@ -28,7 +28,7 @@ class CertificateManager(NHNCloudBaseManager):
             tags={
                 "spaceone:icon": f"{ASSET_URL}/certificate_manager.png"
             },
-            labels=["Management", "Security"]
+            labels=["Management", "Security", "Networking"]
         )
 
         return cloud_service_type

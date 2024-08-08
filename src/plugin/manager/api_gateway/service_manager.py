@@ -28,7 +28,8 @@ class APIGatewayServiceManager(NHNCloudBaseManager):
             is_major=True,
             tags={
                 "spaceone:icon": f"{ASSET_URL}/api_gateway.png"
-            }
+            },
+            labels=["Networking"]
         )
 
         return cloud_service_type

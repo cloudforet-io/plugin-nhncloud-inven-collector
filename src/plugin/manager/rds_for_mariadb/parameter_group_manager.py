@@ -30,7 +30,7 @@ class ParameterGroupManager(NHNCloudBaseManager):
             tags={
                 "spaceone:icon": f"{ASSET_URL}/rds_for_mariadb.png"
             },
-            
+            labels=["Management"]
         )
 
         return cloud_service_type
