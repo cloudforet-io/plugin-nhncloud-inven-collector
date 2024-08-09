@@ -35,7 +35,10 @@ class PushTokenManager(NHNCloudBaseManager):
 
     def create_cloud_service(self, secret_data):
         token_connector = PushTokenConnector()
-        tokens = token_connector.list_tokens(secret_data.get("app_key"), secret_data.get("push_secret_key"))
+
+        tokens = []
+        if hasattr(secret_data, "push_secret_key"):
+            tokens = token_connector.list_tokens(secret_data.get("app_key"), secret_data.get("push_secret_key"))
 
         for token in tokens:
             reference = {
