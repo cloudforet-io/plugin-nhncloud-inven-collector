@@ -35,7 +35,10 @@ class TagManager(NHNCloudBaseManager):
 
     def create_cloud_service(self, secret_data):
         tag_connector = TagConnector()
-        tags = tag_connector.list_tags(secret_data.get("app_key"), secret_data.get("email_secret_key"))
+
+        tags = []
+        if hasattr(secret_data, "email_secret_key"):
+            tags = tag_connector.list_tags(secret_data.get("app_key"), secret_data.get("email_secret_key"))
 
         for tag in tags:
             reference = {

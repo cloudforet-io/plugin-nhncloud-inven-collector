@@ -35,7 +35,10 @@ class TemplateManager(NHNCloudBaseManager):
 
     def create_cloud_service(self, secret_data):
         template_connector = TemplateConnector()
-        templates = template_connector.list_templates(secret_data.get("app_key"), secret_data.get("email_secret_key"))
+
+        templates = []
+        if hasattr(secret_data, "email_secret_key"):
+            templates = template_connector.list_templates(secret_data.get("app_key"), secret_data.get("email_secret_key"))
 
         for template in templates:
             reference = {
