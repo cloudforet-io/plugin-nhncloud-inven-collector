@@ -21,6 +21,10 @@ class GSLBConnector(NHNCloudBaseConnector):
                                     })
 
             if response.status_code != 200 or response.json().get('header').get('isSuccessful') is False:
+                # Ignore collecting request when the service is inactivated. This logic does not ensure that app key is valid.
+                if response.json().get('header').get('resultCode') == 4010001:
+                    return []
+
                 _LOGGER.error(f"Failed to get GSLBs. {response.json()}")
                 raise Exception(f"Failed to get GSLBs. {response.json()}")
 
