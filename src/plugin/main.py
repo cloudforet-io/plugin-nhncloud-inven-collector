@@ -40,3 +40,5 @@ def collector_collect(params: dict) -> Generator[dict, None, None]:
 
     for manager in NHNCloudBaseManager.list_managers_by_schema(auth_type.value):
         yield from manager().collect_resources(secret_data)
+
+    yield from NHNCloudBaseManager.collect_regions()
