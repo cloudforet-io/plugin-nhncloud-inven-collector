@@ -1,14 +1,14 @@
 import logging
 from spaceone.inventory.plugin.collector.lib import *
 
-from plugin.connector.block_storage.block_storage_snapshots_connector import BlockStorageSnapshotsConnector
+from plugin.connector.block_storage.type_connector import BlockStorageTypeConnector
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class BlockStorageSnapshotsManager(NHNCloudBaseManager):
+class BlockStorageTypeManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.TOKEN
     AVAILABLE_REGIONS = [REGION.KR1, REGION.KR2, REGION.JP1]
 
@@ -16,9 +16,9 @@ class BlockStorageSnapshotsManager(NHNCloudBaseManager):
         super().__init__(*args, **kwargs)
 
         self.cloud_service_group = "Block Storage"
-        self.cloud_service_type = "Snapshots"
+        self.cloud_service_type = "Block Storage Type"
         self.provider = "nhncloud"
-        self.metadata_path = "metadata/block_storage/snapshots.yaml"
+        self.metadata_path = "metadata/block_storage/block_storage_type.yaml"
 
     def create_cloud_service_type(self):
         cloud_service_type = make_cloud_service_type(
@@ -37,9 +37,9 @@ class BlockStorageSnapshotsManager(NHNCloudBaseManager):
         return cloud_service_type
 
     def create_cloud_service(self, secret_data):
-        block_connector = BlockStorageSnapshotsConnector()
+        block_connector = BlockStorageTypeConnector()
         for AVAILABLE_REGION in self.AVAILABLE_REGIONS:
-            resources = block_connector.get_snapshots(secret_data, AVAILABLE_REGION)
+            resources = block_connector.get_types(secret_data, AVAILABLE_REGION)
             for resource in resources:
                 reference = {
                     "resource_id": resource.get("id")

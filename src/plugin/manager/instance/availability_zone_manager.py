@@ -1,24 +1,24 @@
 import logging
 from spaceone.inventory.plugin.collector.lib import *
 
-from plugin.connector.nacl.bindings_connector import NACLBindingsConnector
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
+from plugin.connector.instance.availability_zone_connector import InstanceAZConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class NACLBindingsManager(NHNCloudBaseManager):
+class InstanceAZManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.TOKEN
-    AVAILABLE_REGIONS = [REGION.KR1, REGION.KR2]
+    AVAILABLE_REGIONS = [REGION.KR1, REGION.KR2, REGION.JP1]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.cloud_service_group = "Network ACL"
-        self.cloud_service_type = "Network ACL Binding"
+        self.cloud_service_group = "Instance"
+        self.cloud_service_type = "Instance Availability Zone"
         self.provider = "nhncloud"
-        self.metadata_path = "metadata/nacl/bindings.yaml"
+        self.metadata_path = "metadata/instance/instance_AZ_resource.yaml"
 
     def create_cloud_service_type(self):
         cloud_service_type = make_cloud_service_type(
@@ -29,23 +29,24 @@ class NACLBindingsManager(NHNCloudBaseManager):
             is_primary=True,
             is_major=True,
             tags={
-                "spaceone:icon": f"{ASSET_URL}/network_acl.png"
+                "spaceone:icon": f"{ASSET_URL}/instance.png"
             },
-            labels=["Networking", "Security"]
+            labels=["Compute", "Networking"]
         )
 
         return cloud_service_type
 
     def create_cloud_service(self, secret_data):
-        bindings_connector = NACLBindingsConnector()
+        resource_connector = InstanceAZConnector()
+
         for AVAILABLE_REGION in self.AVAILABLE_REGIONS:
-            resources = bindings_connector.get_bindings(secret_data, AVAILABLE_REGION)
+            resources = resource_connector.get_availability_zone(secret_data, AVAILABLE_REGION)
             for resource in resources:
                 reference = {
-                    "resource_id": resource.get("id")
+                    "resource_id": resource.get("zoneName")
                 }
                 cloud_service = make_cloud_service(
-                    name=resource['id'],
+                    name=resource["zoneName"],
                     cloud_service_type=self.cloud_service_type,
                     cloud_service_group=self.cloud_service_group,
                     provider=self.provider,
@@ -55,4 +56,3 @@ class NACLBindingsManager(NHNCloudBaseManager):
                     region_code=AVAILABLE_REGION.name
                 )
                 yield cloud_service
-
