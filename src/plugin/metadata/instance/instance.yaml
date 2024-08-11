@@ -173,10 +173,14 @@ tabs.1:
   type: table
   root_path: data.volumes
   fields:
+    - Name: name
     - ID: id
-    - Device: device
-    - Server ID: serverId
-    - Volume ID: volumeId
+    - Volume Type: volume_type
+    - Size: size
+    - Description: description
+    - Status: status
+    - Availability Zone: availability_zone
+    - Created At: created_at
 
 tabs.2:
   name: Operating System
@@ -188,22 +192,36 @@ tabs.2:
     - OS Distribution: os_version
     - OS Architecture: os_architecture
 
-
 tabs.3:
   name: Network
   type: table
-  root_path: data.addresses.vpc2
+  root_path: data.networks
   fields:
     - MAC Address: OS-EXT-IPS-MAC:mac_addr
     - IP Address: addr
     - Type: OS-EXT-IPS:type
+    - IP Version: version
 
 tabs.4:
   name: Security Groups
-  type: table
-  root_path: data.security_groups
-  fields:
-    - Name: name
+  items:
+      - name: Security Groups
+        type: table
+        root_path: data.security_groups.security_group_rules
+        fields:
+          - Security Group ID: group_id
+          - Security Group Name: group_name
+          - Rule ID: id
+          - Direction: direction
+            type: enum
+            enums:
+              - ingress: coral.600
+              - egress: indigo.500
+          - Protocol: protocol
+          - Port Range Min: port_range_min
+          - Port Range Max: port_range_max
+          - EtherType: ethertype
+          - Remote IP Prefix: remote_ip_prefix
 
 tabs.5:
   name: Metadata

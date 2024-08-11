@@ -39,3 +39,17 @@ class BlockStorageConnector(NHNCloudBaseConnector):
                 break
 
         return volumes
+
+    def get_volume_detail(self, secret_data: dict, region: REGION, volume_id: str) -> list:
+        token = self.get_token(secret_data)
+
+        url = f"https://{region.name.lower()}-api-block-storage-infrastructure.nhncloudservice.com/v2/{secret_data.get('tenant_id')}/volumes/{volume_id}"
+        headers = {"X-Auth-Token": token}
+
+        response = requests.get(url, headers=headers)
+
+        if response.status_code != 200:
+            _LOGGER.error(f"Failed to get Block Storage Volumes. {response.json()}")
+            raise Exception(f"Failed to get Block Storage Volumes. {response.json()}")
+
+        return response.json().get('volume', [])
