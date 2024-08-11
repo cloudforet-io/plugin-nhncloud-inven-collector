@@ -35,7 +35,10 @@ class CategoryManager(NHNCloudBaseManager):
 
     def create_cloud_service(self, secret_data):
         category_connector = CategoryConnector()
-        categories = category_connector.list_categories(secret_data.get("app_key"), secret_data.get("email_secret_key"))
+
+        categories = []
+        if hasattr(secret_data, "email_secret_key"):
+            categories = category_connector.list_categories(secret_data.get("app_key"), secret_data.get("email_secret_key"))
 
         for category in categories:
             reference = {
