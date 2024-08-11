@@ -1,0 +1,60 @@
+search:
+  fields:
+    - Node Group ID: data.uuid
+    - Node Group Name: data.name
+    - Node Group Count: data.node_count
+table:
+  sort:
+    key: data.uuid
+    desc: false
+  fields:
+    - Node Group ID: data.uuid
+    - Node Group Name: data.name
+    - Node Group Count: data.node_count
+    - Status: data.status
+    - Max Node Count: data.max_node_count
+    - Min Node Count: data.min_node_count
+
+tabs.0:
+  name: Labels
+  type: item
+  root_path: data.labels
+  fields:
+    - Availability Zone: availability_zone
+    - Boot Volume Size: boot_volume_size
+    - Boot Volume Type: boot_volume_type
+    - CA Enable: ca_enable
+    - CA Image: ca_image
+    - CA Max Node Count: ca_max_node_count
+    - CA Min Node Count: ca_min_node_count
+    - CA Scale Down Delay After Add: ca_scale_down_delay_after_add
+    - CA Scale Down Enable: ca_scale_down_enable
+    - CA Scale Down Unneeded Time: ca_scale_down_unneeded_time
+    - CA Scale Down Util Thresh: ca_scale_down_util_thresh
+    - Cert Manager API: cert_manager_api
+    - Cluster Autoscale: clusterautoscale
+    - External Network ID: external_network_id
+    - External Subnet ID List: external_subnet_id_list
+    - Flavor Type: flavor_type
+    - Hypervisor Type: hypervisor_type
+    - Kube Tag: kube_tag
+    - Kube Version Status: kube_version_status
+    - Login Username: login_username
+    - Master LB Floating IP Enabled: master_lb_floating_ip_enabled
+    - Strict SG Rules: strict_sg_rules
+    - Node Image: node_image
+    - OS Arch: os_arch
+    - OS Distro: os_distro
+    - OS Type: os_type
+    - OS Version: os_version
+    - Project Domain: project_domain
+    - Server Group Meta: server_group_meta
+
+tabs.1:
+  name: Address
+  type: item
+  fields:
+    - Node Address: data.node_addresses
+      type: list
+      options:
+        delimiter: ', '

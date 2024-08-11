@@ -59,3 +59,5 @@ from plugin.manager.transit_hub.multicast_domain_manager import MulticastDomainM
 from plugin.manager.vpc.vpc_manager import VPCManager
 from plugin.manager.vpc.subnet_manager import VPCSubnetManager
 from plugin.manager.vpc.routing_table_manager import RoutingTableManager
+from plugin.manager.nks.group_manager import NKSGroupManager
+from plugin.manager.nks.nks_manager import NKSManager
