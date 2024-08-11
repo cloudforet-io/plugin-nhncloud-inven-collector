@@ -27,9 +27,9 @@ from plugin.manager.loadbalancer.secret_manager import LoadBalancerSecretManager
 from plugin.manager.loadbalancer.healthmonitors_manager import LBHealthMonitorsManager
 from plugin.manager.loadbalancer.listeners_manager import LoadBalancerListenersManager
 from plugin.manager.loadbalancer.L7Rules_manager import LoadBalancerL7RulesManager
-from plugin.manager.nacl.nacl_manager import NACLManager
-from plugin.manager.nacl.rules_manager import NACLRulesManager
-from plugin.manager.nacl.bindings_manager import NACLBindingsManager
+from plugin.manager.network_acl.network_acl_manager import NetworkACLManager
+from plugin.manager.network_acl.rule_manger import RuleManager
+from plugin.manager.network_acl.binding_manager import BindingManager
 from plugin.manager.push.token_manager import PushTokenManager
 from plugin.manager.push.tag_manager import PushTagManager
 from plugin.manager.rds_for_mariadb.db_security_group_manager import DBSecurityGroupManager
@@ -48,8 +48,8 @@ from plugin.manager.rds_for_mysql.backup_manager import BackupManager
 from plugin.manager.rds_for_mysql.notification_group_manager import NotificationGroupManager
 from plugin.manager.service_gateway.service_endpoints_manager import ServiceEndpointsManager
 from plugin.manager.service_gateway.service_gateway_manager import ServiceGatewayManager
-from plugin.manager.sg.rules_manager import SGRulesManager
-from plugin.manager.sg.security_group_manager import SGManager
+from plugin.manager.security_group.rule_manager import RuleManager
+from plugin.manager.security_group.security_group_manager import SecurityGroupManager
 from plugin.manager.transit_hub.routing_table_manager import RoutingTableManager
 from plugin.manager.transit_hub.transit_hub_manager import TransitHubManager
 from plugin.manager.transit_hub.shared_multicast_domain_manager import SharedMulticastDomainManager

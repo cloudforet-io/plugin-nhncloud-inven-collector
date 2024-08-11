@@ -8,7 +8,7 @@ from plugin.manager.base import NHNCloudBaseManager
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class NACLRulesManager(NHNCloudBaseManager):
+class RuleManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.TOKEN
     AVAILABLE_REGIONS = [REGION.KR1, REGION.KR2]
 
@@ -18,7 +18,7 @@ class NACLRulesManager(NHNCloudBaseManager):
         self.cloud_service_group = "Network ACL"
         self.cloud_service_type = "Network ACL Rule"
         self.provider = "nhncloud"
-        self.metadata_path = "metadata/nacl/rules.yaml"
+        self.metadata_path = "metadata/network_acl/rule.yaml"
 
     def create_cloud_service_type(self):
         cloud_service_type = make_cloud_service_type(
