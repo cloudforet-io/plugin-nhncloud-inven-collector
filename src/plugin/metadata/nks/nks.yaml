@@ -1,0 +1,65 @@
+search:
+  fields:
+    - Cluster ID: data.uuid
+    - Cluster Name: data.name
+    - Node Count: data.node_count
+table:
+  sort:
+    key: data.uuid
+    desc: false
+  fields:
+    - Cluster ID: data.uuid
+    - Cluster Name: data.name
+    - Node Count: data.node_count
+    - Status: data.status
+    - Template ID: data.cluster_template_id
+    - Keypair: data.keypair
+    - Owner ID: data.owner
+    - OS Distro: data.os_distro
+    - Stack ID : data.stack_id
+    - Health Status : data.health_status
+
+tabs.0:
+  name: Detail
+  type: item
+  fields:
+    - Cluster ID: data.uuid
+    - Cluster Name: data.name
+    - Node Count: data.node_count
+    - Status: data.status
+    - Template ID: data.cluster_template_id
+    - Keypair: data.keypair
+    - Owner ID: data.owner
+    - OS Distro: data.os_distro
+    - Stack ID: data.stack_id
+    - Health Status: data.health_status
+    - Create Timeout: data.create_timeout
+    - Docker Volume Size: data.docker_volume_size
+
+tabs.1:
+  name: Labels
+  type: item
+  root_path: data.labels
+  fields:
+    - Availability Zone: availability_zone
+    - Cert Manager API: cert_manager_api
+    - Cluster Autoscale: clusterautoscale
+    - ETCD Volume Size: etcd_volume_size
+    - External Network ID: external_network_id
+    - External Subnet ID List: external_subnet_id_list
+    - Flavor Type: flavor_type
+    - Hypervisor Type: hypervisor_type
+    - Kube Tag: kube_tag
+    - Login Username: login_username
+    - Master LB Floating IP Enabled: master_lb_floating_ip_enabled
+    - Strict SG Rules: strict_sg_rules
+    - Node Image: node_image
+    - OS Architecture: os_arch
+    - OS Distro: os_distro
+    - OS Type: os_type
+    - OS Version: os_version
+    - Project Domain: project_domain
+    - Server Group Meta: server_group_meta
+    - Service Cluster IP Range: service_cluster_ip_range
+    - Pods Network CIDR: pods_network_cidr
+    - Pods Network Subnet: pods_network_subnet
