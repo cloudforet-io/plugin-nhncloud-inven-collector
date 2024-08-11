@@ -16,13 +16,29 @@ class LoadBalancerSecretConnector(NHNCloudBaseConnector):
     def get_secrets(self, secret_data: dict, region: REGION) -> dict:
         token = self.get_token(secret_data)
 
-        url = f"https://{region.name.lower()}-api-key-manager-infrastructure.nhncloudservice.com/v1/secrets"
-        headers = {"X-Auth-Token": token}
+        secrets = []
+        offset = 0  # limit 처리위해
 
-        response = requests.get(url, headers=headers)
+        while True:
+            url = f"https://{region.name.lower()}-api-key-manager-infrastructure.nhncloudservice.com/v1/secrets?offset={offset}"
+            headers = {"X-Auth-Token": token}
 
-        if response.status_code != 200:
-            _LOGGER.error(f"Failed to get LB Secrets. {response.json()}")
-            raise Exception(f"Failed to get LB Secrets. {response.json()}")
+            response = requests.get(url, headers=headers)
+
+            if response.status_code != 200:
+                _LOGGER.error(f"Failed to get LoadBalancer Secrets. {response.json()}")
+                raise Exception(f"Failed to get LoadBalancer Secrets. {response.json()}")
+
+            if not response.json()['secrets']:
+                break
+
+            secrets.extend(response.json()['secrets'])
+            offset += 10
+
+            if offset > 1000:  # 무한루프 처리
+                break
 
         return response.json().get("secrets", [])
+
+
+

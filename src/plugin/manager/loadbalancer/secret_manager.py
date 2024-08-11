@@ -36,7 +36,6 @@ class LoadBalancerSecretManager(NHNCloudBaseManager):
 
         return cloud_service_type
 
-    #TODO 페이징 처리!!!!!
     def create_cloud_service(self, secret_data):
         secrets_connector = LoadBalancerSecretConnector()
         for AVAILABLE_REGION in self.AVAILABLE_REGIONS:
