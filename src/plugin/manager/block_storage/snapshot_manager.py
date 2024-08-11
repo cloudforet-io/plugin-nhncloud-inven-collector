@@ -1,7 +1,7 @@
 import logging
 from spaceone.inventory.plugin.collector.lib import *
 
-from plugin.connector.block_storage.block_storage_snapshots_connector import BlockStorageSnapshotsConnector
+from plugin.connector.block_storage.snapshot_connector import BlockStorageSnapshotsConnector
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
 from plugin.manager.base import NHNCloudBaseManager
 

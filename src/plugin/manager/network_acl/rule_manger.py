@@ -1,7 +1,7 @@
 import logging
 from spaceone.inventory.plugin.collector.lib import *
 
-from plugin.connector.nacl.rules_connector import NACLRulesConnector
+from plugin.connector.network_acl.rule_connector import NACLRulesConnector
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
 from plugin.manager.base import NHNCloudBaseManager
 
