@@ -46,7 +46,7 @@ tabs.0:
 tabs.1:
   name: Metadata
   type: table
-  root_path: metadata
+  root_path: data.metadata
   fields:
     - ATTACHED MODE: attached_mode
     - READONLY: readonly
