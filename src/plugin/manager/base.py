@@ -2,7 +2,7 @@ import abc
 import logging
 from spaceone.core.manager import BaseManager
 from spaceone.inventory.plugin.collector.lib import *
-from plugin.conf.cloud_service_conf import AUTH_TYPE, PROVIDER_NAME
+from plugin.conf.cloud_service_conf import AUTH_TYPE, PROVIDER_NAME, REGION_INFORMATIONS
 
 _LOGGER = logging.getLogger("cloudforet")
 
@@ -50,6 +50,20 @@ class NHNCloudBaseManager(BaseManager):
             return AUTH_TYPE.APP_KEY
 
         raise NotImplementedError("Secret data is not valid")
+
+    @staticmethod
+    def collect_regions():
+        for REGION_INFO in REGION_INFORMATIONS.values():
+            region_info = REGION_INFO.copy()
+            region_info.update({
+                "provider": "nhncloud",
+            })
+
+            yield make_response(
+                region=region_info,
+                match_keys=[["provider", "region_code"]],
+                resource_type="inventory.Region",
+            )
 
     def collect_resources(self, secret_data: dict):
         try:
