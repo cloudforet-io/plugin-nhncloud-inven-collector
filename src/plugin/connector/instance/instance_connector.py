@@ -40,3 +40,18 @@ class InstanceConnector(NHNCloudBaseConnector):
             raise Exception(f"Failed to get Instance's VolumeAttachments. {response.json()}")
 
         return response.json().get("volumeAttachment", [])
+
+
+    def get_detail(self, secret_data: dict, region: REGION, server_id: str) -> dict:
+        token = self.get_token(secret_data)
+
+        url = f"https://{region.name.lower()}-api-instance-infrastructure.nhncloudservice.com/v2/{secret_data.get('tenant_id')}/servers/{server_id}"
+        headers = {"X-Auth-Token": token}
+
+        response = requests.get(url, headers=headers)
+
+        if response.status_code != 200:
+            _LOGGER.error(f"Failed to get Instances. {response.json()}")
+            raise Exception(f"Failed to get Instances. {response.json()}")
+
+        return response.json().get("server", [])

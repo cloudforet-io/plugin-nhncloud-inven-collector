@@ -44,6 +44,36 @@ tabs.0:
     - OS Volume Replication Driver Data: data.os-volume-replication:driver_data
 
 tabs.1:
+  name: Attached Instances
+  items:
+      - name: Attached Instances
+        type: table
+        root_path: data.attached_servers
+        fields:
+          - Instance ID: id
+          - Instance State: status
+            type: enum
+            enums:
+              - ACTIVE: green.500
+                type: state
+              - BUILD: yellow.500
+                type: state
+              - SHUTOFF: red.500
+                type: state
+              - REBOOT: yellow.500
+                type: state
+          - Instance Type: flavor.id
+          - Key Pair: key_name
+          - Image: image.id
+          - Availability Zone: OS-EXT-AZ:availability_zone
+          - Launched At: OS-SRV-USG:launched_at
+            type: datetime
+            source_type: iso8601
+          - Created: data.created
+            type: datetime
+            source_type: iso8601
+
+tabs.2:
   name: Metadata
   type: table
   root_path: data.metadata
