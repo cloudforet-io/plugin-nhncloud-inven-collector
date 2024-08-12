@@ -1,0 +1,13 @@
+search:
+  fields:
+    - Container Name: data.name
+table:
+  sort:
+    key: data.name
+    desc: false
+  fields:
+    - Container Name: data.name
+    - Count: data.count
+    - Storage Policy: data.storage_policy
+    - Last Modified: data.last_modified
+    - Bytes: data.bytes
