@@ -3,7 +3,7 @@ from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL, REGION
 from plugin.connector.nks.nks_connector import NKSConnector
-from plugin.connector.nks.nks_group_connector import NKSGroupConnector
+from plugin.connector.nks.group_connector import NKSGroupConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")

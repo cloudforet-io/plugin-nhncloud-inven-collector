@@ -2,7 +2,7 @@ import logging
 from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
-from plugin.connector.loadbalancer.listeners_connector import LoadBalancerListenersConnector
+from plugin.connector.loadbalancer.listener_connector import LoadBalancerListenersConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
