@@ -1,26 +1,16 @@
 ---
-schema_id: nhncloud-app-key
-name: NHN Cloud App Key
+schema_id: nhncloud-certificate-manager-app-key
+name: NHN Cloud Certificate Manager App Key
 schema_type: SECRET
 schema:
   order:
-  - app_key
-  - email_secret_key
-  - push_secret_key
+  - certificate_manager_app_key
   - user_access_key_id
   - secret_access_key
   properties:
-    app_key:
+    certificate_manager_app_key:
       format: password
-      title: APP Key
-      type: string
-    email_secret_key:
-      format: password
-      title: Email Secret Key
-      type: string
-    push_secret_key:
-      format: password
-      title: Push Secret Key
+      title: Certificate Manager APP Key
       type: string
     user_access_key_id:
       format: password
@@ -31,6 +21,8 @@ schema:
       title: Secret Access Key
       type: string
   required:
-  - app_key
+  - certificate_manager_app_key
+  - user_access_key_id
+  - secret_access_key
   type: object
 provider: nhncloud

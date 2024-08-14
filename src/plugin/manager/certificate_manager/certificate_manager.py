@@ -9,7 +9,7 @@ _LOGGER = logging.getLogger("cloudforet")
 
 
 class CertificateManager(NHNCloudBaseManager):
-    auth_type = AUTH_TYPE.APP_KEY
+    auth_type = AUTH_TYPE.CERTIFICATE_MANAGER_APP_KEY
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -35,12 +35,7 @@ class CertificateManager(NHNCloudBaseManager):
 
     def create_cloud_service(self, secret_data):
         certificate_connector = CertificateConnector()
-        certificates = []
-
-        if (secret_data.get("certificate_app_key") is not None and 
-            secret_data.get("user_access_key_id") is not None and 
-            secret_data.get("secret_access_key") is not None):
-            certificates = certificate_connector.list_certificates(secret_data.get("certificate_app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"))
+        certificates = certificate_connector.list_certificates(secret_data.get("certificate_manager_app_key"), secret_data.get("user_access_key_id"), secret_data.get("secret_access_key"))
 
         for certificate in certificates:
             reference = {
