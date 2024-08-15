@@ -4,6 +4,7 @@ class AUTH_TYPE(Enum):
     TOKEN = "nhncloud-access-key"
     APP_KEY = "nhncloud-app-key"
     CERTIFICATE_MANAGER_APP_KEY = "nhncloud-certificate-manager-app-key"
+    OBJECT_STORAGE_TOKEN = "nhncloud-object-storage-access-key"
 
 ASSET_URL="https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud"
 PROVIDER_NAME="nhncloud"
