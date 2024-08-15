@@ -1,0 +1,34 @@
+---
+schema_id: nhncloud-object-storage-access-key
+name: NHN Cloud Object Storage Access Key
+schema_type: SECRET
+schema:
+  order:
+  - object_storage_tenant_id
+  - username
+  - object_storage_password
+  - storage_account
+  properties:
+    object_storage_tenant_id:
+      format: text
+      title: Object Storage Tenant ID
+      type: string
+    username:
+      format: text
+      title: Username
+      type: string
+    object_storage_password:
+      format: password
+      title: Object Storage Password
+      type: string
+    storage_account:
+      format: password
+      title: Storage Account
+      type: string
+  required:
+  - object_storage_tenant_id
+  - username
+  - object_storage_password
+  - storage_account
+  type: object
+provider: nhncloud

@@ -50,6 +50,8 @@ class NHNCloudBaseManager(BaseManager):
             return AUTH_TYPE.APP_KEY
         if 'certificate_manager_app_key' in secret_data and 'user_access_key_id' in secret_data and 'secret_access_key' in secret_data:
             return AUTH_TYPE.CERTIFICATE_MANAGER_APP_KEY
+        if 'object_storage_tenant_id' in secret_data and 'username' in secret_data and 'object_storage_password' in secret_data and 'storage_account' in secret_data:
+            return AUTH_TYPE.OBJECT_STORAGE_TOKEN
 
         raise NotImplementedError("Secret data is not valid")
 
