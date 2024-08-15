@@ -1,11 +1,34 @@
 ---
 capability: {}
 image: YOUR_DOCKERHUB_REPO/plugin-nhncloud-inven-collector
-labels: []
+labels:
+  - Instance
+  - Image
+  - NHN Kubernetes Service(NKS)
+  - VPC
+  - Floating IP
+  - Network ACL
+  - Security Group
+  - Load Balancer
+  - Transit Hub
+  - Service Gateway
+  - DNS Plus
+  - Block Storage
+  - RDS For MySQL
+  - RDS For MariaDB
+  - Push
+  - Email
+  - API Gateway
+  - Certificate Manager
+  - Object Storage
 name: NHN Cloud Collector
 plugin_id: plugin-nhncloud-inven-collector
 provider: nhncloud
 registry_type: DOCKER_HUB
 resource_type: inventory.Collector
 tags:
+  description: NHN Cloud Collector
   icon: https://raw.githubusercontent.com/cloudforet-io/static-assets/master/providers/nhncloud/logo.png
+  long_description: NHN Cloud delivers a cloud environment suitable for various industries
+    with knowhow and technology built up in various fields such as finance, public sectors, 
+    game, and content. This plugin can collect major cloud resources in NHN Cloud.
