@@ -65,6 +65,7 @@ class BlockStorageManager(NHNCloudBaseManager):
                     data=resource,
                     account=secret_data.get("username", None),
                     reference=reference,
-                    region_code=AVAILABLE_REGION.name
+                    region_code=AVAILABLE_REGION.name,
+                    instance_size=resource.get("size", 0),
                 )
                 yield cloud_service
