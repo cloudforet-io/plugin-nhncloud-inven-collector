@@ -25,7 +25,7 @@ class LoadBalancerListenersConnector(NHNCloudBaseConnector):
             _LOGGER.error(f"Failed to get LB Listeners. {response.json()}")
             raise Exception(f"Failed to get LB Listeners. {response.json()}")
 
-        return response.json().get("listeners", [])
+        return response.json().get("listeners", {})
 
     def get_listener_detail(self, listener_id: str, secret_data: dict, region: REGION) -> dict:
         token = self.get_token(secret_data)
@@ -39,4 +39,4 @@ class LoadBalancerListenersConnector(NHNCloudBaseConnector):
             _LOGGER.error(f"Failed to get LB Listeners Detail. {response.json()}")
             raise Exception(f"Failed to get LB Listeners Detail. {response.json()}")
 
-        return response.json().get("listener", [])
+        return response.json().get("listener", {})
