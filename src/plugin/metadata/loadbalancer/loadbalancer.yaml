@@ -18,3 +18,36 @@ table:
     - LoadBalancer Type: data.loadbalancer_type
     - Description: data.description
     - Distributed: data.distributed
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - LoadBalancer ID: data.id
+    - LoadBalancer Name: data.name
+    - Tenant ID: data.tenant_id
+    - Provisioning Status: data.provisioning_status
+    - Operating Status: data.operating_status
+    - Provider: data.provider
+    - LoadBalancer Type: data.loadbalancer_type
+    - Description: data.description
+    - Distributed: data.distributed
+
+tabs.1:
+  - name: Listeners
+    items:
+      - name: Listeners
+        type: table
+        root_path: data.listeners
+        fields:
+          - Listener ID: id
+          - Name: name
+          - Protocol: protocol
+          - Protocol Port: protocol_port
+          - Connection Limit: connection_limit
+          - Keepalive Timeout: keepalive_timeout
+          - Default Pool ID: default_pool_id
+          - Admin State Up: admin_state_up
+          - Block Invalid HTTP Request: block_invalid_http_request
+          - Description: description
+          - Certificate Expiry Date: cert_expire_date

@@ -16,6 +16,19 @@ table:
     - Proxy Protocol: data.proxy_protocol
     - Connection Limit: data.connection_limit
     - Description: data.description
+    - Cert Expire Date: data.cert_expire_date
+
+tabs.0:
+  name: Details
+  type: item
+  fields:
+    - LoadBalancer ID: data.id
+    - LoadBalancer Name: data.name
+    - Tenant ID: data.tenant_id
+    - Protocol: data.protocol
+    - Proxy Protocol: data.proxy_protocol
+    - Connection Limit: data.connection_limit
+    - Description: data.description
     - TLS Version: data.tls_version
     - Cert Expire Date: data.cert_expire_date
     - Default Pool ID: data.default_pool_id

@@ -2,6 +2,7 @@ import logging
 from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
+from plugin.connector.loadbalancer.listener_connector import LoadBalancerListenersConnector
 from plugin.connector.loadbalancer.loadbalancer_connector import LoadBalancerConnector
 from plugin.manager.base import NHNCloudBaseManager
 
@@ -39,9 +40,19 @@ class LoadBalancerManager(NHNCloudBaseManager):
 
     def create_cloud_service(self, secret_data):
         lb_connector = LoadBalancerConnector()
+        listener_connector = LoadBalancerListenersConnector()
         for AVAILABLE_REGION in self.AVAILABLE_REGIONS:
             resources = lb_connector.get_lb(secret_data, AVAILABLE_REGION)
+
             for resource in resources:
+                listener_list = []
+                listeners = resource['listeners']
+                for listener in listeners:
+                    detail = listener_connector.get_listener_detail(listener['id'], secret_data, AVAILABLE_REGION)
+                    listener_list.append(detail)
+
+                resource['listeners'] = listener_list
+
                 reference = {
                     "resource_id": resource.get("id")
                 }
