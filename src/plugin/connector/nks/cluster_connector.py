@@ -8,7 +8,7 @@ from plugin.connector.base import NHNCloudBaseConnector
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class NKSConnector(NHNCloudBaseConnector):
+class ClusterConnector(NHNCloudBaseConnector):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

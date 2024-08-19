@@ -2,24 +2,24 @@ import logging
 from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, ASSET_URL, REGION
-from plugin.connector.nks.nks_connector import NKSConnector
-from plugin.connector.nks.group_connector import NKSGroupConnector
+from plugin.connector.nks.node_group_connector import NodeGroupConnector
+from plugin.connector.nks.cluster_connector import ClusterConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class NKSGroupManager(NHNCloudBaseManager):
+class NodeGroupManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.TOKEN
     AVAILABLE_REGIONS = [REGION.KR1, REGION.KR2]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.cloud_service_group = "Container"
+        self.cloud_service_group = "NKS"
         self.cloud_service_type = "Node Group"
         self.provider = "nhncloud"
-        self.metadata_path = "metadata/nks/group.yaml"
+        self.metadata_path = "metadata/nks/node_group.yaml"
 
     def create_cloud_service_type(self):
         cloud_service_type = make_cloud_service_type(
@@ -38,8 +38,8 @@ class NKSGroupManager(NHNCloudBaseManager):
         return cloud_service_type
 
     def create_cloud_service(self, secret_data):
-        group_connector = NKSGroupConnector()
-        cluster_connector = NKSConnector()
+        group_connector = NodeGroupConnector()
+        cluster_connector = ClusterConnector()
         for AVAILABLE_REGION in self.AVAILABLE_REGIONS:
             for cluster in cluster_connector.get_cluster(secret_data, AVAILABLE_REGION):
                 cluster_id = cluster['uuid']
