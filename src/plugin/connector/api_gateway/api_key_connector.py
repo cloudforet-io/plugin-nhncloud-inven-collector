@@ -22,6 +22,9 @@ class APIKeyConnector(NHNCloudBaseConnector):
                                     })
 
             if response.status_code != 200 or response.json().get('header').get('isSuccessful') is False:
+                # Ignore collecting request when the service is inactivated. This logic does not ensure that app key is valid.
+                if response.json().get('header').get('resultCode') == 401199000:
+                    return []
                 _LOGGER.error(f"Failed to get keys. {response.json()}")
                 raise Exception(f"Failed to get keys. {response.json()}")
 
