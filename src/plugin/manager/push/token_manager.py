@@ -37,7 +37,7 @@ class PushTokenManager(NHNCloudBaseManager):
         token_connector = PushTokenConnector()
 
         tokens = []
-        if hasattr(secret_data, "push_secret_key"):
+        if "push_secret_key" in secret_data:
             tokens = token_connector.list_tokens(secret_data.get("app_key"), secret_data.get("push_secret_key"))
 
         for token in tokens:

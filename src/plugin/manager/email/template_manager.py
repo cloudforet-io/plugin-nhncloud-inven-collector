@@ -37,7 +37,7 @@ class TemplateManager(NHNCloudBaseManager):
         template_connector = TemplateConnector()
 
         templates = []
-        if hasattr(secret_data, "email_secret_key"):
+        if "email_secret_key" in secret_data:
             templates = template_connector.list_templates(secret_data.get("app_key"), secret_data.get("email_secret_key"))
 
         for template in templates:
