@@ -2,23 +2,23 @@ import logging
 from spaceone.inventory.plugin.collector.lib import *
 
 from plugin.conf.cloud_service_conf import AUTH_TYPE, REGION, ASSET_URL
-from plugin.connector.nks.nks_connector import NKSConnector
+from plugin.connector.nks.cluster_connector import ClusterConnector
 from plugin.manager.base import NHNCloudBaseManager
 
 _LOGGER = logging.getLogger("cloudforet")
 
 
-class NKSManager(NHNCloudBaseManager):
+class ClusterManager(NHNCloudBaseManager):
     auth_type = AUTH_TYPE.TOKEN
     AVAILABLE_REGIONS = [REGION.KR1, REGION.KR2]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.cloud_service_group = "Container"
-        self.cloud_service_type = "NKS"
+        self.cloud_service_group = "NKS"
+        self.cloud_service_type = "Cluster"
         self.provider = "nhncloud"
-        self.metadata_path = "metadata/nks/nks.yaml"
+        self.metadata_path = "metadata/nks/cluster.yaml"
 
     def create_cloud_service_type(self):
         cloud_service_type = make_cloud_service_type(
@@ -37,7 +37,7 @@ class NKSManager(NHNCloudBaseManager):
         return cloud_service_type
 
     def create_cloud_service(self, secret_data):
-        nks_connector = NKSConnector()
+        nks_connector = ClusterConnector()
         for AVAILABLE_REGION in self.AVAILABLE_REGIONS:
             resources = nks_connector.get_cluster(secret_data, AVAILABLE_REGION)
             for resource in resources:

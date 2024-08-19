@@ -30,6 +30,9 @@ from plugin.manager.loadbalancer.L7Rules_manager import LoadBalancerL7RulesManag
 from plugin.manager.network_acl.network_acl_manager import NetworkACLManager
 from plugin.manager.network_acl.rule_manger import RuleManager
 from plugin.manager.network_acl.binding_manager import BindingManager
+from plugin.manager.nks.node_group_manager import NodeGroupManager
+from plugin.manager.nks.cluster_manager import ClusterManager
+from plugin.manager.object_storage.container_manager import ContainerManager
 from plugin.manager.push.token_manager import PushTokenManager
 from plugin.manager.push.tag_manager import PushTagManager
 from plugin.manager.rds_for_mariadb.db_security_group_manager import DBSecurityGroupManager
@@ -59,6 +62,3 @@ from plugin.manager.transit_hub.multicast_domain_manager import MulticastDomainM
 from plugin.manager.vpc.vpc_manager import VPCManager
 from plugin.manager.vpc.subnet_manager import VPCSubnetManager
 from plugin.manager.vpc.routing_table_manager import RoutingTableManager
-from plugin.manager.nks.group_manager import NKSGroupManager
-from plugin.manager.nks.nks_manager import NKSManager
-from plugin.manager.object_storage.container_manager import ContainerManager
