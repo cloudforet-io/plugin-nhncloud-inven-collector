@@ -37,7 +37,7 @@ class PushTagManager(NHNCloudBaseManager):
         tag_connector = PushTagConnector()
 
         tags = []
-        if hasattr(secret_data, "push_secret_key"):
+        if "push_secret_key" in secret_data:
             tags = tag_connector.list_tags(secret_data.get("app_key"), secret_data.get("push_secret_key"))
 
         for tag in tags:
