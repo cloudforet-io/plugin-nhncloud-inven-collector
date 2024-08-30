@@ -301,5 +301,5 @@ You should insert information about account in Cloudforet's **Service Account** 
 ---
 
 ## Comprehensive Guide on Utilizing the NHN Plugin
-#### [English guide for NHN Plugin](./docs/en/GUIDE.md)
-#### [Korean guide for NHN Plugin](./docs/ko/GUIDE.md)
+#### [English guide for NHN Plugin](./docs/en/README.md)
+#### [Korean guide for NHN Plugin](./docs/ko/README.md)
