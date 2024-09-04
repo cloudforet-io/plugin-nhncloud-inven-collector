@@ -1,6 +1,6 @@
 ## Overview
 
-<img src="./GUIDE-img/nhn-cloud.svg" width="90%" height="60%">
+<img src="./README-img/nhn-cloud.svg" width="90%" height="60%">
 
 클라우드포레에 NHN 클라우드 서비스 계정을 등록하려면 아래의 설정 정보가 필요합니다. 스키마는 네 가지 유형이 있습니다.
 
@@ -35,21 +35,21 @@ NHN 가이드 보기 [NHN Documentation](https://docs.nhncloud.com/en/nhncloud/e
 
 NHN 클라우드 리소스를 수집하려면 클라우드포레에서 NHN 클라우드 서비스 계정을 만들어야 합니다.
 
-<img src="./GUIDE-img/account-info-1.png" width="90%" height="60%">
+<img src="./README-img/account-info-1.png" width="90%" height="60%">
 
 서비스 계정으로 이동하여 [NHN Cloud]를 클릭하여 NHN 클라우드 서비스 계정을 생성합니다.
 
-<img src="./GUIDE-img/account-info-2.png" width="90%" height="60%">
+<img src="./README-img/account-info-2.png" width="90%" height="60%">
 
-<img src="./GUIDE-img/account-info-3.png" width="90%" height="60%">
+<img src="./README-img/account-info-3.png" width="90%" height="60%">
 
 서비스 계정에 대한 프로젝트를 선택합니다.
 
-<img src="./GUIDE-img/account-info-4.png" width="70%" height="60%">
+<img src="./README-img/account-info-4.png" width="70%" height="60%">
 
 스키마를 선택하고 입력란을 채워 넣습니다.
 
-<img src="./GUIDE-img/account-info-5.png" width="70%" height="60%">
+<img src="./README-img/account-info-5.png" width="70%" height="60%">
 
 
 아래 설정 가이드에서는 위에서 언급한 정보의 의미와 해당 정보를 어디서 가져오는 것인지 살펴보겠습니다.
@@ -145,12 +145,12 @@ RDS 및 Certificate Manager 리소스를 사용할 때 필요합니다.
 (1-1) 사용 중인 프로젝트를 선택하고 [Compute - Instance]로 이동합니다.
 그리고 [API 엔드포인트 설정] 버튼을 클릭합니다.
 
-<img src="./GUIDE-img/access-key-info-ko-1.png" width="90%" height="80%">
+<img src="./README-img/access-key-info-ko-1.png" width="90%" height="80%">
 
 (1-2) 여기에서 '테넌트 ID'를 찾을 수 있습니다. [변경] 버튼을 통해 API '비밀번호'를 설정할 수도 있습니다.
 'username'은 NHN 콘솔 IAM에 로그인할 때 사용하는 아이디입니다.
 
-<img src="./GUIDE-img/access-key-info-ko-2.png" width="90%" height="80%">
+<img src="./README-img/access-key-info-ko-2.png" width="90%" height="80%">
 
 <br>
 <br>
@@ -167,11 +167,11 @@ RDS 및 Certificate Manager 리소스를 사용할 때 필요합니다.
 (2-1) 사용 중인 프로젝트를 선택하고 [Storage - Object Storage]로 이동합니다.
 그리고 [API 엔드포인트 설정] 버튼을 클릭합니다.
 
-<img src="./GUIDE-img/storage-access-key-info-ko-1.png" width="90%" height="80%">
+<img src="./README-img/storage-access-key-info-ko-1.png" width="90%" height="80%">
 
 (2-2) 여기에서 '오브젝트 스토리지 테넌트 ID'와 '스토리지 계정'을 확인할 수 있습니다. [변경] 버튼을 통해 API '오브젝트 스토리지 비밀번호'를 설정할 수도 있습니다.
 
-<img src="./GUIDE-img/storage-access-key-info-ko-2.png" width="90%" height="80%">
+<img src="./README-img/storage-access-key-info-ko-2.png" width="90%" height="80%">
 
 <br>
 <br>
@@ -188,37 +188,37 @@ RDS 및 Certificate Manager 리소스를 사용할 때 필요합니다.
 
 (3-1) 사용 중인 프로젝트를 선택하고 [프로젝트 관리] 섹션을 클릭합니다.
 
-<img src="./GUIDE-img/app-key-info-ko-1.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-1.png" width="90%" height="80%">
 
 (3-2) NHN 클라우드 서비스의 인증을 위해 통합 프로젝트 앱키가 적용됩니다. 여기에서 앱키를 생성할 수 있습니다. 앱키가 생성되면 아래와 같이 앱키가 표시됩니다.
 
-<img src="./GUIDE-img/app-key-info-ko-2.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-2.png" width="90%" height="80%">
 
 (3-3) 이메일 Secret 키는 이메일 서비스를 위한 옵션 키입니다. 사용 중인 프로젝트를 선택하고 [Notification - Email]로 이동합니다.
 그 다음 [URL & Appkey] 버튼을 클릭합니다.
 
-<img src="./GUIDE-img/app-key-info-ko-3.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-3.png" width="90%" height="80%">
 
 (3-4) 여기에서 'Email Secret Key'를 확인할 수 있습니다. 앱키는 (3-2)에서 생성한 통합 앱키를 사용해야 하며 해당 리소스에 대한 앱키를 사용하지 않도록 주의하세요.
 
-<img src="./GUIDE-img/app-key-info-ko-4.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-4.png" width="90%" height="80%">
 
 (3-5) 푸시 Secret 키는 푸시 서비스를 위한 옵션 키입니다. 사용 중인 프로젝트를 선택하고 [Notification - Push]로 이동합니다.
 그 다음 [URL & Appkey] 버튼을 클릭합니다.
 
-<img src="./GUIDE-img/app-key-info-ko-5.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-5.png" width="90%" height="80%">
 
 (3-6) 여기에서 'Push Secret Key'를 확인할 수 있습니다. 앱키는 (3-2)에서 생성한 통합 앱키를 사용해야 하며 해당 리소스에 대한 앱키를 사용하지 않도록 주의하세요.
 
-<img src="./GUIDE-img/app-key-info-ko-6.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-6.png" width="90%" height="80%">
 
 (3-7) 오른쪽 상단 모서리에 있는 이름, API 보안 설정을 클릭합니다.
 
-<img src="./GUIDE-img/app-key-info-ko-7.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-7.png" width="90%" height="80%">
 
 (3-8) 여기에서 사용자 액세스 키 ID와 비밀 액세스 키를 생성할 수 있습니다. 사용자 액세스 키 ID와 비밀 액세스 키가 생성되면 아래와 같이 표시됩니다.
 
-<img src="./GUIDE-img/app-key-info-ko-8.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-ko-8.png" width="90%" height="80%">
 
 <br>
 <br>
@@ -234,12 +234,12 @@ RDS 및 Certificate Manager 리소스를 사용할 때 필요합니다.
 (4-1) 사용 중인 프로젝트를 선택하고 [Management - Certificate Manager]로 이동합니다.
 그 다음 [URL & Appkey] 버튼을 클릭합니다.
 
-<img src="./GUIDE-img/certificate-app-key-info-ko-1.png" width="90%" height="80%">
+<img src="./README-img/certificate-app-key-info-ko-1.png" width="90%" height="80%">
 
 (4-2) 그 다음 여기에서 'Certificate Manager APP Key'를 확인할 수 있습니다. 이 스키마에는 (3-2)에서 생성한 통합 앱키를 사용하지 않고 Certificate Manager APP Key를 사용해야 합니다. 통합 앱키로는 Certificate Manager 리소스를 호출할 수 없기 때문입니다.
 
-<img src="./GUIDE-img/certificate-app-key-info-ko-2.png" width="90%" height="80%">
+<img src="./README-img/certificate-app-key-info-ko-2.png" width="90%" height="80%">
 
 만약 특정 서비스를 찾을 수 없는 경우 [서비스 선택]으로 이동하여 서비스를 활성화하세요.
 
-<img src="./GUIDE-img/service-info-ko.png" width="90%" height="80%">
+<img src="./README-img/service-info-ko.png" width="90%" height="80%">

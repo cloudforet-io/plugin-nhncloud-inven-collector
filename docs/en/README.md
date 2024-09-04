@@ -1,6 +1,6 @@
 ## Overview
 
-<img src="./GUIDE-img/nhn-cloud.svg" width="90%" height="60%">
+<img src="./README-img/nhn-cloud.svg" width="90%" height="60%">
 
 To register an NHN Cloud service account in Cloudforet, you need the settings information below. There are four types of Schemas.
 
@@ -35,21 +35,21 @@ See the NHN Guides [NHN Documentation](https://docs.nhncloud.com/en/nhncloud/en/
 
 To collect NHN Cloud resources, you have to create a NHN Cloud Service account in Cloudforet.
 
-<img src="./GUIDE-img/account-info-1.png" width="90%" height="60%">
+<img src="./README-img/account-info-1.png" width="90%" height="60%">
 
 Go to Service Account and click [NHN Cloud] to create a NHN Cloud Service account.
 
-<img src="./GUIDE-img/account-info-2.png" width="90%" height="60%">
+<img src="./README-img/account-info-2.png" width="90%" height="60%">
 
-<img src="./GUIDE-img/account-info-3.png" width="90%" height="60%">
+<img src="./README-img/account-info-3.png" width="90%" height="60%">
 
 Select a Project for the Service Account.
 
-<img src="./GUIDE-img/account-info-4.png" width="70%" height="60%">
+<img src="./README-img/account-info-4.png" width="70%" height="60%">
 
 Choose Secret Type Schema and insert the Input Forms.
 
-<img src="./GUIDE-img/account-info-5.png" width="70%" height="60%">
+<img src="./README-img/account-info-5.png" width="70%" height="60%">
 
 
 This setup guide will take a closer look at what the above-mentioned information means and where to obtain it.
@@ -145,12 +145,12 @@ Choose a schema or schemas you are willing to obtain, and proceed with the follo
 (1-1) Choose the project you are using and go to [Compute - Instance].
 And then click [Set API Endpoint] button.
 
-<img src="./GUIDE-img/access-key-info-1.png" width="90%" height="80%">
+<img src="./README-img/access-key-info-1.png" width="90%" height="80%">
 
 (1-2) Then, you can find your 'Tenant ID' here. You can also click on the [Modify] button to Set API 'Password'.
 'Username' is the ID you use when you login into NHN Console IAM.
 
-<img src="./GUIDE-img/access-key-info-2.png" width="90%" height="80%">
+<img src="./README-img/access-key-info-2.png" width="90%" height="80%">
 
 <br>
 <br>
@@ -167,12 +167,12 @@ And then click [Set API Endpoint] button.
 (2-1) Choose the project you are using and go to [Storage - Object Storage].
 And then click [Set API Endpoint] button.
 
-<img src="./GUIDE-img/storage-access-key-info-1.png" width="90%" height="80%">
+<img src="./README-img/storage-access-key-info-1.png" width="90%" height="80%">
 
 (2-2) Then, you can find your 'Object Storage Tenant ID' and 'Storage Account' here. You can also click on the [Modify] button to Set API 'Object Storage Password'.
 'Username' is the ID you use when you login into NHN Console IAM.
 
-<img src="./GUIDE-img/storage-access-key-info-2.png" width="90%" height="80%">
+<img src="./README-img/storage-access-key-info-2.png" width="90%" height="80%">
 
 <br>
 <br>
@@ -189,37 +189,37 @@ And then click [Set API Endpoint] button.
 
 (3-1) Choose the project you are using and click on the [Project Management] section.
 
-<img src="./GUIDE-img/app-key-info-1.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-1.png" width="90%" height="80%">
 
 (3-2) Integrated project Appkey is applied for authentication of NHN Cloud Service. You can create your APP Key here. When your APP Key is created, you will see the APP Key below.
 
-<img src="./GUIDE-img/app-key-info-2.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-2.png" width="90%" height="80%">
 
 (3-3) Email Secret Key is an optional key for Email service. Choose the project you are using and go to [Notification - Email].
 And then click [URL & Appkey] button.
 
-<img src="./GUIDE-img/app-key-info-3.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-3.png" width="90%" height="80%">
 
 (3-4) Then, you can find your 'Email Secret Key' here. Make sure to use Integrated Appkey that we created at (3-2) and not to use Appkey for specific resource.
 
-<img src="./GUIDE-img/app-key-info-4.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-4.png" width="90%" height="80%">
 
 (3-5) Push Secret Key is an optional key for Push service. Choose the project you are using and go to [Notification - Push].
 And then click [URL & Appkey] button.
 
-<img src="./GUIDE-img/app-key-info-5.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-5.png" width="90%" height="80%">
 
 (3-6) Then, you can find your 'Push Secret Key' here. Make sure to use Integrated Appkey that we created at (3-2) and not to use Appkey for specific resource.
 
-<img src="./GUIDE-img/app-key-info-6.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-6.png" width="90%" height="80%">
 
 (3-7) Click your name and API Security Setting at the top right corner.
 
-<img src="./GUIDE-img/app-key-info-7.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-7.png" width="90%" height="80%">
 
 (3-8) You can create your User Access Key ID and Secret Access Key here. When your User Access Key ID and Secret Access Key is created, you will see the them below.
 
-<img src="./GUIDE-img/app-key-info-8.png" width="90%" height="80%">
+<img src="./README-img/app-key-info-8.png" width="90%" height="80%">
 
 <br>
 <br>
@@ -235,13 +235,13 @@ And then click [URL & Appkey] button.
 (4-1) Choose the project you are using and click [Management - Certificate Manager].
 And then click [URL & Appkey] button.
 
-<img src="./GUIDE-img/certificate-app-key-info-1.png" width="90%" height="80%">
+<img src="./README-img/certificate-app-key-info-1.png" width="90%" height="80%">
 
 (4-2) Then, you can find your 'Certificate Manager APP Key' here. Make sure to use Certificate Manager APP Key for this schema and not to use Integrated Appkey that we created at (3-2). This is because Certificate Manager resource can not be called with Integrated Appkey.
 
-<img src="./GUIDE-img/certificate-app-key-info-2.png" width="90%" height="80%">
+<img src="./README-img/certificate-app-key-info-2.png" width="90%" height="80%">
 
 
 If you can't find the service, go to [Service] to activate the service.
 
-<img src="./GUIDE-img/service-info.png" width="90%" height="80%">
+<img src="./README-img/service-info.png" width="90%" height="80%">
