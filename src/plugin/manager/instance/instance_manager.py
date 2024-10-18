@@ -79,7 +79,10 @@ class InstanceManager(NHNCloudBaseManager):
 
     def make_security_group_response(self, AVAILABLE_REGION, resource, secret_data, sg_connector):
         sg_list = []
-        security_group_list = resource['security_groups']
+        security_group_list = []
+        
+        if 'security_groups' in resource:
+            security_group_list = resource['security_groups']
 
         for sg in security_group_list:
             sg_details_list = sg_connector.get_security_groups(secret_data, AVAILABLE_REGION, sg['name'])
